@@ -7,7 +7,6 @@ import LogoPanel from "../../components/LogoPanel/LogoPanel"
 import AboutUs from "../../components/AboutUsPanel/AboutUsPanel";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Tween, Timeline } from 'react-gsap';
 
 
 
@@ -34,25 +33,14 @@ const Home = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
 
     return (
         <div className="home">
-        <Timeline
-            target={
-                <Nav
-                    toggleDisplayPopUp={toggleDisplayPopUp}
-                    closePopUp={closePopUp}
-                    displayPopUp={displayPopUp}
-                    clear={navClear}
-                />
-                }
-            >
-            <Tween
-                from={{ opacity: 0 }}
-                to={{ opacity: 1 }}
-                />
-                <Tween
+            <Nav
+                toggleDisplayPopUp={toggleDisplayPopUp}
+                closePopUp={closePopUp}
+                displayPopUp={displayPopUp}
+                clear={navClear}
             />
-        </Timeline>
         
-        <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
+            <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
                 <Scene pin>
                     <LogoPanel displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp}/>
                 </Scene>
