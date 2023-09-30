@@ -3,6 +3,8 @@ import "./ContentProduction.scss";
 import Header from "../Header/Header";
 import MainHeading from "../../components/MainHeading/MainHeading";
 
+
+
 const ContentProduction = (props) => {
     const { toggleDisplayPopUp, displayPopUp, closePopUp} = props;
 
@@ -12,8 +14,11 @@ const ContentProduction = (props) => {
             <div className="content-production__content">
                 <MainHeading title="Content Production"/>
             </div>
+            
         </div>
     );
 };
 
 export default ContentProduction;
+
+

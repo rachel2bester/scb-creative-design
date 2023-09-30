@@ -1,0 +1,84 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+@use "../../assets/sass/reset" as *;
+
+.about-us {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $white;
+    z-index: 2;
+    position: relative;
+
+    &__popups {
+        z-index: 2;
+    }
+
+    &__img {
+        position: fixed;
+        z-index: 0;
+    }
+
+    &__main {
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__logo {
+        z-index: 3;
+        fill: $primary-color;
+        margin: auto;
+        padding: 5px;
+    }
+
+    &__overlay {
+        z-index: 2;
+        background-color: rgb(217, 215, 215) ;
+        opacity: 40%;
+        position: fixed;
+        width:100vw;
+        height: 100vh;
+    }
+
+}
+
+@media only screen and (min-aspect-ratio: 3/2) {
+    .about-us {
+        &__img {
+            width: 100vw;
+        }
+        &__logo {
+            height: 50vh;
+        }
+    }
+}
+
+@media only screen and (max-aspect-ratio: 3/2) {
+    .about-us {
+        &__img {
+            height: 100vh;
+        }
+    }
+}
+
+@media only screen and ((max-width: 650px)  or (min-height: 800px)) {
+    .about-us {
+        &__logo {
+            width: 80vw;
+        }
+    }
+}
+
+@media only screen and ((min-width: 650px))  {
+    .about-us {
+        &__logo {
+            height: 40vh;
+        }
+    }
+}
