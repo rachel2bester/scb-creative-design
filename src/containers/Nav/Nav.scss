@@ -1,0 +1,62 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+
+.nav {
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    align-self: flex-start;
+    align-items: center;
+    height: 70px;
+    color: $primary-color;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    border-bottom: 6px $primary-color double;
+
+    &--opaque {
+        background-color: $white;
+    }
+
+    &__margin {
+        margin-bottom: 70px;;
+    }
+
+    &__logo {
+        height: 50px;
+        fill: $primary-color;
+        padding: 10px;
+
+        &:hover {
+            opacity: 50%;
+        }
+    }
+
+    &__bars {
+        height: 50px;
+        padding: 10px;
+        fill: $primary-color;
+        margin-left: auto;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .nav {
+        &__bars {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        &__buttons {
+            display: none;
+        }
+    }
+}

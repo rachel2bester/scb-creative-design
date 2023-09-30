@@ -1,0 +1,25 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+
+
+.nav-button {
+    font-size: 23px;
+    font-family: $primary-font-family;
+    color: $primary-color;
+    padding: 7px;
+    text-align: center;
+    z-index: 3;
+    text-decoration: none;
+
+    &--current {
+        font-weight: bold;
+        :hover {
+            opacity: 100%;
+        }
+    }
+    
+
+    &:hover {
+        opacity: 70%;
+    }
+}

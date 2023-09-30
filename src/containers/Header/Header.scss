@@ -1,0 +1,14 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+
+.header {
+    //background-color: $primary-color;
+    &__popup {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        background-color: $white;
+    }
+}
+

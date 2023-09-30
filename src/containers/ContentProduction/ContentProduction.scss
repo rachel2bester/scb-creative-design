@@ -1,0 +1,12 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+@use "../../assets/sass/reset" as *;
+
+.content-production {
+    display: flex;
+    justify-content: center;
+
+    &__content {
+        margin: 90px;
+    }
+}

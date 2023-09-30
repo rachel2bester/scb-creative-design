@@ -1,0 +1,20 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+
+.popup {
+    justify-self: start;
+    margin-bottom: none;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 6px $primary-color double;
+    width: 80vw;
+    padding-top: 5px;
+}
+
+@media only screen and (min-width: 769px) {
+    .popup {
+        display: none;
+    }
+}
