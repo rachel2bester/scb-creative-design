@@ -1,10 +1,21 @@
+@font-face {
+    font-family: 'copperplate-gothic';
+    src: url("../fonts/CopperplateGothicBoldRegular.ttf") format("truetype");
+ }
+ @font-face {
+    font-family: 'CA-saygon-light';
+    src: url("../fonts/CASaygonText-Light.ttf") format("truetype");
+ }
+
 //colors
 $primary-color: rgb(42, 65, 41);
 $secondary-color: yellow;
-$white: white;
+$nav-bar-color: rgba(82, 128, 81, 0.288);
+$white: rgb(243, 243, 231);
 $black: black;
 
 
 //fonts
-$primary-font-family: Times-New-Roman;
+$primary-font-family: copperplate-gothic;
+$secondary-font-family: CA-saygon-light;
 

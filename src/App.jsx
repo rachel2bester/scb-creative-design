@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import React, { useState } from "react";
 import Home from './containers/Home/Home';
 import { Route, Routes, HashRouter as Router } from 'react-router-dom';

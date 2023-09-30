@@ -1,4 +1,12 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+
 * {
     margin: 0px;
     padding: 0px;
+    
+}
+
+app {
+    background-color: $white;
 }
