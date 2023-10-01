@@ -4,14 +4,13 @@ import { Controller, Scene } from 'react-scrollmagic';
 
 
 
-const LazyLoadText = ({imgSrc, alt, className}) => {
+const LazyLoadText = ({text, className}) => {
     
     return (<>
             <Controller>
-                <Scene classToggle="img--visible" indicators={true} offset={-window.innerHeight/2 + 50}>
-                    <div></div>
-                </Scene>
-                
+                <Scene classToggle="text--visible" offset={-window.innerHeight/2 + 50}>
+                    <div className={'text ' + className}>{text}</div>
+                </Scene> 
             </Controller>
         </>
     )

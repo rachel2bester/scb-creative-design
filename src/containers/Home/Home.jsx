@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.scss";
-import MenuPopup from "../MenuPopup/MenuPopup";
 import Nav from "./../Nav/Nav";
 import { Controller, Scene } from 'react-scrollmagic';
 import LogoPanel from "../../components/LogoPanel/LogoPanel"
@@ -8,6 +7,7 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import { useState } from "react";
 import { useEffect } from "react";
 import TheTeamPanel from "../../components/TheTeamPanel/TheTeamPanel";
+import BottomBar from "../BottomBar/BottomBar";
 
 
 const Home = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
@@ -45,6 +45,7 @@ const Home = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
                     <>
                     <AboutUs />
                     <TheTeamPanel />
+                    <BottomBar />
                     </>
                 </Scene>
             </Controller>

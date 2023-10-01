@@ -19,7 +19,7 @@
         flex-wrap: wrap;
         align-items: center;
         &__img{
-            height: 400px;
+            height: 500px;
         }
 
         &__text{
@@ -50,6 +50,5 @@
 
 @media only screen and ((min-width: 650px))  {
     .the-team {
-        
     }
 }

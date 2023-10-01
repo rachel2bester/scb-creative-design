@@ -1,6 +1,9 @@
 import React from 'react'
 import "./TheTeamPanel.scss"
 import SectionHeading from '../SectionHeading/SectionHeading';
+import LazyLoadText from '../LazyLoadText/LazyLoadText';
+import LazyLoadImg from '../LazyLoadImg/LazyLoadImg';
+import TeamMember from '../TeamMember/TeamMember';
 
 
 const TheTeamPanel = () => {
@@ -8,10 +11,24 @@ const TheTeamPanel = () => {
     return (
         <div className="the-team">
             <SectionHeading title="The Team" white={true}/>
-            <div className='the-team__container'>
-                <img src="http://placekitten.com/600/900" className='the-team__container__img'/>
-                <div className='the-team__container__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam metus dolor, accumsan at ante ut, vestibulum iaculis odio. Pellentesque semper est ut urna luctus pellentesque. Cras interdum feugiat neque, et aliquet diam. Morbi et condimentum tortor, id efficitur eros. Sed vulputate velit turpis, at ullamcorper lectus laoreet vitae. Mauris fringilla a urna at scelerisque. Aliquam aliquet orci eu ullamcorper pellentesque. Curabitur quis maximus orci. In interdum, tellus et mollis malesuada, turpis tellus maximus dolor, sit amet egestas ex felis ut nisi. Duis eu felis fermentum, ultricies odio vitae, tincidunt eros. Etiam tristique ullamcorper sem, pellentesque rutrum nunc dapibus a. Morbi in venenatis purus, vitae laoreet ipsum. Aliquam commodo faucibus cursus. Nullam eu quam erat. Aliquam vitae dignissim metus. Vivamus accumsan.</div>
-            </div>
+
+            <TeamMember 
+                teamMember="Team Member1"
+                imgSrc="http://placekitten.com/900/600" 
+                text=
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia viverra lobortis. Quisque luctus at dui dapibus pellentesque. Nulla hendrerit tellus metus, ut tempus lectus mollis et. Maecenas mi orci, malesuada eget ligula ut, convallis fermentum orci. Vestibulum efficitur fermentum nunc, et suscipit purus finibus sed. Aliquam ullamcorper lectus leo, a ornare ligula volutpat vitae. Vivamus condimentum ligula quis aliquam sollicitudin. Curabitur rutrum dolor libero, sit amet posuere nulla iaculis ut. In venenatis dui sed metus rhoncus hendrerit. Sed ac lacus vel lectus malesuada rhoncus." 
+            />
+            <TeamMember teamMember="Team Member2"
+                imgSrc="http://placekitten.com/900/600" 
+                text=
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia viverra lobortis. Quisque luctus at dui dapibus pellentesque. Nulla hendrerit tellus metus, ut tempus lectus mollis et. Maecenas mi orci, malesuada eget ligula ut, convallis fermentum orci. Vestibulum efficitur fermentum nunc, et suscipit purus finibus sed. Aliquam ullamcorper lectus leo, a ornare ligula volutpat vitae. Vivamus condimentum ligula quis aliquam sollicitudin. Curabitur rutrum dolor libero, sit amet posuere nulla iaculis ut. In venenatis dui sed metus rhoncus hendrerit. Sed ac lacus vel lectus malesuada rhoncus." 
+                swapped
+            />
+            <TeamMember teamMember="Team Member3"
+                imgSrc="http://placekitten.com/900/600" 
+                text=
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia viverra lobortis. Quisque luctus at dui dapibus pellentesque. Nulla hendrerit tellus metus, ut tempus lectus mollis et. Maecenas mi orci, malesuada eget ligula ut, convallis fermentum orci. Vestibulum efficitur fermentum nunc, et suscipit purus finibus sed. Aliquam ullamcorper lectus leo, a ornare ligula volutpat vitae. Vivamus condimentum ligula quis aliquam sollicitudin. Curabitur rutrum dolor libero, sit amet posuere nulla iaculis ut. In venenatis dui sed metus rhoncus hendrerit. Sed ac lacus vel lectus malesuada rhoncus." 
+            />
         </div>
     )
 }

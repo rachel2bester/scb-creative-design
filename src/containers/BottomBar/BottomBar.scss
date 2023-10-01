@@ -2,11 +2,9 @@
 @use "../../assets/sass/mixins" as *;
 @use "../../assets/sass/reset" as *;
 
-.text {
-    opacity: 0;
-    transition: all 1s ease;
-    &--visible {
-        opacity: 1;
-    }
-}
+.bottom-bar {
+    height: 100px;
+    width: 100%;
+    background: $white;
 
+}
