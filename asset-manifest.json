@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/scb-creative-design/static/css/main.aa02e49f.css",
+    "main.js": "/scb-creative-design/static/js/main.f9eaaddf.js",
+    "static/js/787.108be2b7.chunk.js": "/scb-creative-design/static/js/787.108be2b7.chunk.js",
+    "static/media/desktop-image.WEBP": "/scb-creative-design/static/media/desktop-image.5d67369532a48687ed6f.WEBP",
+    "static/media/CASaygonText-Light.ttf": "/scb-creative-design/static/media/CASaygonText-Light.0bd68db315a16eb17d8a.ttf",
+    "static/media/CopperplateGothicBoldRegular.ttf": "/scb-creative-design/static/media/CopperplateGothicBoldRegular.4669e88ae36834cda916.ttf",
+    "index.html": "/scb-creative-design/index.html",
+    "main.aa02e49f.css.map": "/scb-creative-design/static/css/main.aa02e49f.css.map",
+    "main.f9eaaddf.js.map": "/scb-creative-design/static/js/main.f9eaaddf.js.map",
+    "787.108be2b7.chunk.js.map": "/scb-creative-design/static/js/787.108be2b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa02e49f.css",
+    "static/js/main.f9eaaddf.js"
+  ]
+}
