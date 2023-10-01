@@ -1,0 +1,55 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+@use "../../assets/sass/reset" as *;
+
+.the-team {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+    padding:3%;
+    padding-top: 2%;
+    position: relative;
+    z-index: 2;
+
+
+    &__container {
+        padding: 50px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        &__img{
+            height: 400px;
+        }
+
+        &__text{
+            font-family: $secondary-font-family;
+            width: 30%;
+            color: $white;
+        }
+    }
+}
+
+@media only screen and (min-aspect-ratio: 3/2) {
+    .the-team {
+        
+    }
+}
+
+@media only screen and (max-aspect-ratio: 3/2) {
+    .the-team {
+        
+    }
+}
+
+@media only screen and ((max-width: 650px)  or (min-height: 800px)) {
+    .the-team {
+        
+    }
+}
+
+@media only screen and ((min-width: 650px))  {
+    .the-team {
+        
+    }
+}

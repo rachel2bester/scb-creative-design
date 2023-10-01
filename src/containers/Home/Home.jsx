@@ -4,9 +4,10 @@ import MenuPopup from "../MenuPopup/MenuPopup";
 import Nav from "./../Nav/Nav";
 import { Controller, Scene } from 'react-scrollmagic';
 import LogoPanel from "../../components/LogoPanel/LogoPanel"
-import AboutUs from "../../components/AboutUsPanel/AboutUsPanel";
+import AboutUs from "../../components/AboutUs/AboutUs";
 import { useState } from "react";
 import { useEffect } from "react";
+import TheTeamPanel from "../../components/TheTeamPanel/TheTeamPanel";
 
 
 
@@ -42,16 +43,13 @@ const Home = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
         
             <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
                 <Scene pin>
-                    <LogoPanel displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp}/>
+                    <LogoPanel/>
                 </Scene>
                 <Scene pin>
-                    <AboutUs displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp}/>
-                </Scene>
-                <Scene pin>
-                    <div className="panel green"><span>Panel</span></div>
-                </Scene>
-                <Scene pin>
-                    <div className="panel bordeaux"><span>Panel</span></div>
+                    <>
+                    <AboutUs />
+                    <TheTeamPanel />
+                    </>
                 </Scene>
             </Controller>
         </div>

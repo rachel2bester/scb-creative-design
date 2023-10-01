@@ -23,7 +23,7 @@
         z-index: 2;
         position: fixed;
         display: flex;
-        justify-content: space-around;
+        justify-content: left;
         align-items: center;
         flex-direction: column;
     }
@@ -31,10 +31,7 @@
     &__logo {
         z-index: 3;
         fill: $primary-color;
-        margin: auto;
         padding: 5px;
-        position: absolute;
-        justify-self: center;
     }
 
     &__overlay {

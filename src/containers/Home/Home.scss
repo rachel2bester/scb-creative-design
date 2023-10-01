@@ -4,4 +4,8 @@
 
 .home {
     overflow: hidden;
+    &__panel-over {
+        position: absolute;
+
+    }
 }
