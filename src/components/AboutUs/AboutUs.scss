@@ -19,12 +19,13 @@
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
-        &__img{
+
+        &__img {
             width: 45vw;
             justify-self: left;
         }
 
-        &__text{
+        &__text {
             font-family: $secondary-font-family;
             width: 35%;
             font-size: 15px;
@@ -34,6 +35,9 @@
             height: 400px;
             
             
+        }
+        &--visible {
+            opacity: 1;
         }
     }
 }

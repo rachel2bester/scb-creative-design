@@ -1,0 +1,12 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+@use "../../assets/sass/reset" as *;
+
+.img {
+    opacity: 0;
+    transition: all 1s ease;
+    &--visible {
+        opacity: 1;
+    }
+}
+

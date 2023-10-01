@@ -3,22 +3,19 @@ import "./SectionHeading.scss"
 import { Controller, Scene } from 'react-scrollmagic';
 
 const SectionHeading = ({title, white}) => {
-    const headingClassName = white ? "section-heading section-heading--white" : "section-heading"
+    const headingClassName = white ? "section-heading__heading section-heading__heading--white" : "section-heading__heading"
+    const lineClassName = white ? "section-heading__line section-heading__line--white" : "section-heading__line"
     return (
-        <>
-        {/* <Controller>
-            <Scene duration={200} classToggle="zap" triggerElement="#trigger" indicators={true}>
-                {(progress, event) => (<>
-                <div className="test">Pin Test {event.type} {progress}</div>
-                <h1 className={headingClassName}>{title}</h1>
-                </>
-                )}
-            </Scene>
-            <Scene classToggle={['.test', 'yellow']} reverse={false} indicators={true}>
-                <div>Toggle other class</div>
-            </Scene>
-        </Controller> */}
-        </>
+        <div className='section-heading'>     
+            <Controller>
+                <Scene classToggle="section-heading__heading--visible" offset={-window.innerHeight/2 + 50}>
+                    <div className={headingClassName}>{title}</div>
+                </Scene>
+                <Scene classToggle="section-heading__line--visible" offset={-window.innerHeight/2 + 50}>
+                    <div className={lineClassName}></div>
+                </Scene>
+            </Controller>
+        </div>
     )
 }
 

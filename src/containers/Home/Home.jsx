@@ -10,19 +10,15 @@ import { useEffect } from "react";
 import TheTeamPanel from "../../components/TheTeamPanel/TheTeamPanel";
 
 
-
-
 const Home = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
     const [navClear, setNavClear] = useState(true);
     const handleScroll = () => {
-        
         if (window.scrollY > window.innerHeight - 75) {
             setNavClear(false)
             
         } else {
             setNavClear(true)
         }
-
     }
     useEffect(() => {
         handleScroll();

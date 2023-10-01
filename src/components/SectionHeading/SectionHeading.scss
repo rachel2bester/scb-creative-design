@@ -3,20 +3,58 @@
 @use "../../assets/sass/reset" as *;
 
 .section-heading {
-    font-size: 50px;
-    font-family: $primary-font-family;
-    color: $primary-color;
-    text-align: left;
-    //transition: width 0.3s ease-out;
-
-    &--white {
-        color: $white;
+    display:flex;
+    align-items: center;
+    &__heading {
+        font-size: 50px;
+        font-family: $primary-font-family;
+        color: $primary-color;
+        text-align: left;
+        white-space: nowrap;
+        padding-right: 30px;
+        opacity: 0;
+        transition: all 0.75s ease;
+        &--white {
+            color: $white;
+        }
+        &--visible {
+            opacity: 1;
+        }  
     }
-    
+
+    &__line {
+        transition: width 1s ease-out;
+	    width: 0px;
+        height: 3px;
+        background-color: $secondary-color;
+        transition-delay: 0.5;
+        &--visible {
+            width: 100%;
+        }
+        &--white {
+            background-color: $white;
+        }
+    }
 }
 
 @media only screen and ((max-width: 650px))  {
     .section-heading {
-        font-size: 40px;
+        flex-direction: column;
+        &__heading {
+            font-size: 40px;
+            padding-right: 0px;
+        }
     }
 }
+
+  
+  .test {
+	  
+    
+  }
+
+ 
+
+  .zip {
+    
+  }

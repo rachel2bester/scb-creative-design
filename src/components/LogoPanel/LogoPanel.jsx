@@ -35,6 +35,7 @@ const LogoPanel = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
             <img src={desktopImg} className="logo-panel__img" alt="a living room" />
         <div className="logo-panel__overlay"></div>
         <div className="logo-panel__main">
+            <MenuPopup displayPopUp={displayPopUp} closePopUp={closePopUp} />
             <svg viewBox="0 0 780 541" preserveAspectRatio="xMidYMid meet" ref={ref} className="logo-panel__logo" style={{marginTop: logoPos}}>
                 <g transform="translate(0,541) scale(0.100000,-0.100000)" stroke="none">
                     <path d="M50 3485 l0 -1855 3850 0 3850 0 0 1855 0 1855 -3850 0 -3850 0 0 -1855z m7590 0 l0 -1745 -3740 0 -3740 0 0 1745 0 1745 3740 0 3740 0 0 -1745z"/>
@@ -58,7 +59,7 @@ const LogoPanel = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
                 </g>
             </svg>
 
-            <MenuPopup displayPopUp={displayPopUp} closePopUp={closePopUp} />
+            
             
         </div>
         </div>
