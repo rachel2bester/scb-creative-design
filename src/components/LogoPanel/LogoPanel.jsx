@@ -1,41 +1,30 @@
 import React from 'react'
 import "./LogoPanel.scss"
-import MenuPopup from '../../containers/MenuPopup/MenuPopup'
 import desktopImg from "../../assets/images/desktop-image.WEBP";
 import { useState, useEffect, useRef } from 'react';
 
 
-const LogoPanel = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
-    const [scrollY, setScrollY] = useState(0);
+const LogoPanel = ({ displayPopUp, scrollY}) => {
+    
     const [logoHeight, setLogoHeight] = useState(0)
     const ref = useRef(null)
-    var logoMiddlePos = window.innerHeight / 2 - scrollY / 2  - logoHeight / 2 + 40;
-    var logoPos = (logoMiddlePos > 80) ? logoMiddlePos : 80;
-    
+    var logoMiddlePos = displayPopUp ? window.innerHeight / 2 - scrollY / 2  - logoHeight / 2 + 130 : window.innerHeight / 2 - scrollY / 2  - logoHeight / 2 + 35;
+    var logoPos;
+    if (displayPopUp) {
+        logoPos = (logoMiddlePos > 260) ? logoMiddlePos : 260;
+    } else {
+        logoPos = (logoMiddlePos > 75) ? logoMiddlePos : 75;
+    }
 
     useEffect(() => {
         setLogoHeight(ref.current.clientHeight)
-        console.log(logoMiddlePos)
-        console.log()
     })
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollY(window.scrollY);
-        };
-        handleScroll();
-
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-  }, []);
     return (
         <div className="logo-panel">
             <img src={desktopImg} className="logo-panel__img" alt="a living room" />
         <div className="logo-panel__overlay"></div>
         <div className="logo-panel__main">
-            <MenuPopup displayPopUp={displayPopUp} closePopUp={closePopUp} />
             <svg viewBox="0 0 780 541" preserveAspectRatio="xMidYMid meet" ref={ref} className="logo-panel__logo" style={{marginTop: logoPos}}>
                 <g transform="translate(0,541) scale(0.100000,-0.100000)" stroke="none">
                     <path d="M50 3485 l0 -1855 3850 0 3850 0 0 1855 0 1855 -3850 0 -3850 0 0 -1855z m7590 0 l0 -1745 -3740 0 -3740 0 0 1745 0 1745 3740 0 3740 0 0 -1745z"/>

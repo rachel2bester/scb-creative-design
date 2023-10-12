@@ -5,8 +5,10 @@
 .corporate-interiors {
     display: flex;
     justify-content: center;
+    background-color: $white;
 
     &__content {
         margin: 90px;
+        height: 200vh;
     }
 }

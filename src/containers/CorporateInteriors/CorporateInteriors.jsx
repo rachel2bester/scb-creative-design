@@ -8,7 +8,7 @@ const CorporateInteriors = (props) => {
 
     return (
         <div className="corporate-interiors">
-            <Header displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp}/>
+            <Header displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp} navClear={false} popupClear={false}/>
             <div className="corporate-interiors__content">
                 <MainHeading title="Corporate Interiors"/>
             </div>
