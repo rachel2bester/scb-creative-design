@@ -27,7 +27,7 @@
         align-items: center;
 
         &__img {
-            width: 45vw;
+            width: 35vw;
             justify-self: left;
         }
 
@@ -56,13 +56,7 @@
 }
 
 
-@media only screen and ((max-width: 650px)  or (min-height: 800px)) {
-    .member {
-        
-    }
-}
-
-@media only screen and ((max-width: 650px))  {
+@media only screen and ((max-width: 850px))  {
     .member {
         padding: 10px;
         &__heading {
@@ -81,7 +75,7 @@
             }
 
             &__img{
-                width: 100%;
+                width: 90%;
             }
 
             &__text{
@@ -93,7 +87,17 @@
                     padding-top: 20px;
                 } 
             }
-            
+        }
+    }
+}
+
+
+@media only screen and ((max-width: 850px)) and ((min-width: 600px)){
+    .member {
+        &__container {
+            &__img {
+                width: 60%;
+            }
         }
     }
 }

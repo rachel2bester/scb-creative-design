@@ -7,7 +7,7 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import { useState } from "react";
 import { useEffect } from "react";
 import TheTeamPanel from "../../components/TheTeamPanel/TheTeamPanel";
-import BottomBar from "../BottomBar/BottomBar";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
 
@@ -17,8 +17,6 @@ const Home = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
     const [scrollY, setScrollY] = useState(0);
     const handleScroll = () => {
         setScrollY(window.scrollY);
-        console.log(window.scrollY)
-
         if (window.scrollY > window.innerHeight - 75) {
             setNavClear(false)
             
@@ -53,7 +51,7 @@ const Home = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
                     <>
                     <AboutUs />
                     <TheTeamPanel />
-                    <BottomBar />
+                    <Footer dark={false}/>
                     </>
                 </Scene>
             </Controller>

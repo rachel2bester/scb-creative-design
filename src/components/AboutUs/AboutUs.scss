@@ -35,10 +35,6 @@
             * {
                 padding:10px;
             }
-            
-            
-            
-            
         }
         &--visible {
             opacity: 1;
@@ -53,16 +49,9 @@
 }
 
 
-@media only screen and ((max-width: 650px)  or (min-height: 800px)) {
-    .about-us {
-        
-    }
-}
-
-@media only screen and ((max-width: 650px))  {
+@media only screen and ((max-width: 1100px)) {
     .about-us {
         padding: 10px;
-        
         &__container {
             display: flex;
             justify-content: space-between;
@@ -70,21 +59,53 @@
             align-items: center;
             flex-direction: column;
 
-            &__img{
-                width: 100%;
-            }
-
             &__text{
-                
                 font-size: 13px;
                 width: 100%;
-                padding-bottom: 20px;
                 * {
                     padding-top: 20px;
-                }
-                
-                
+                }               
             }
         }
     }
 }
+
+@media only screen and ((max-width: 1100px)) and ((min-width: 800px)){
+    .about-us {
+        &__container {
+            &__img{
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media only screen and ((max-width: 799px)) and ((min-width: 600px)){
+    .about-us {
+        &__container {
+            &__img{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media only screen and ((max-width: 599px)){
+    .about-us {
+        &__container {
+            &__img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+// @media only screen and ((max-width: 650px))  {
+//     .about-us {
+//         &__container {
+//             &__img{
+//                 width: 80%;
+//             }
+//         }
+//     }
+// }
