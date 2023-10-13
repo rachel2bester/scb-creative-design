@@ -5,8 +5,7 @@ const NavButtons = ({closePopUp}) => {
     
     return (
         <>
-            <NavButton title="Domestic Interiors" linkTo="/domestic-interiors" closePopUp={closePopUp}/>
-            <NavButton title="Corporate Interiors" linkTo="/corporate-interiors" closePopUp={closePopUp}/>
+            <NavButton title="Interiors" linkTo="/interiors" closePopUp={closePopUp}/>
             <NavButton title="Content Production" linkTo="/content-production" closePopUp={closePopUp}/>
             <NavButton title="Contact Us" linkTo="/contact-us" closePopUp={closePopUp}/>
         </>

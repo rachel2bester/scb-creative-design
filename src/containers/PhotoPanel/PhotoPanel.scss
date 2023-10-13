@@ -2,11 +2,15 @@
 @use "../../assets/sass/mixins" as *;
 @use "../../assets/sass/reset" as *;
 
-.domestic-interiors {
-    display: flex;
-    justify-content: center;
-
+.photo-panel {
+    width: 100%;
     &__content {
-        margin: 90px;
+        padding: 30px;
+        &__img {
+
+        }
     }
+    
+   
+
 }
