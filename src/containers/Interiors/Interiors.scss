@@ -3,14 +3,18 @@
 @use "../../assets/sass/reset" as *;
 
 .interiors {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 76px 1fr;
+    height:100vh;
+
+    grid-template-areas: 
+    "nav nav"
+    "sideBar content";
     background-color: $white;
 
     &__content {
-        margin-top: 76px;
-        margin-left: 326px;
-        
+        overflow: scroll;
+        grid-area: content;
     }
 }

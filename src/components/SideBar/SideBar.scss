@@ -3,19 +3,17 @@
 @use "../../assets/sass/reset" as *;
 
 .side-bar {
-    height: 100vh;
-    width: 300px;
     background: $white;
     padding-left: 10px;
     padding-right: 10px;
-    position: fixed;
     align-items: center;
     color: $primary-color;
     border-right: double $primary-color 6px;
     display: grid;
-    grid-template-rows: 96px 30px 1fr 70px;
+    grid-template-rows: 90px 1fr 90px;
     font-family: $secondary-font-family;
     font-size: 13px;
+    grid-area: sideBar;
 
     &__heading {
         padding-top: 80px;
@@ -24,7 +22,7 @@
     &--dark {
         color: $white;
         background: $primary-color;
-        border-right: double $white 6px;
+        border-right: double $secondary-color 6px;
     }
     
     &__container {

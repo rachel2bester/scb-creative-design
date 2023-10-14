@@ -7,24 +7,20 @@ import ContentProduction from './containers/ContentProduction/ContentProduction'
 import ContactUs from './containers/ContactUs/ContactUs';
 
 function App() {
-    const [displayPopUp, setDisplayPopUp] = useState(false);
+    const [displayNavPopup, setDisplayNavPopup] = useState(false);
 
-    const toggleDisplayPopUp = () => {
-        setDisplayPopUp(!displayPopUp);
-    };
-
-    const closePopUp = () => {
-        setDisplayPopUp(false);
+    const toggleDisplayNavPopup = () => {
+        setDisplayNavPopup(!displayNavPopup);
     };
     
     return (
         <Router>
         <div className="App">
             <Routes>
-                <Route path='/' element={<Home displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp}/>}/>
-                <Route path='/interiors' element={<Interiors displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp}/>}/>
-                <Route path='/content-production' element={<ContentProduction displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp}/>}/>
-                <Route path='/contact-us' element={<ContactUs displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp}/>}/>
+                <Route path='/' element={<Home displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} />}/>
+                <Route path='/interiors' element={<Interiors displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} />}/>
+                <Route path='/content-production' element={<ContentProduction displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} />}/>
+                <Route path='/contact-us' element={<ContactUs displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} />}/>
             </Routes>
             
         </div>

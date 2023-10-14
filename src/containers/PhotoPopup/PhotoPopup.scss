@@ -1,0 +1,84 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+@use "../../assets/sass/reset" as *;
+
+.photo-popup {
+    
+    
+
+    &__overlay{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        position: fixed;
+        transition: all 0.75s ease;
+        opacity: 80%;
+        z-index: 1; 
+    }
+
+    &__close {
+        height: 60px;
+        padding: 20px;
+        z-index: 3;
+        fill: $white;
+        margin-left: auto;
+        transition: all 0.75s ease;
+        position: fixed;
+        right: 0px;
+
+        &:hover {
+            fill: $sagey-grey;
+        }
+    }
+    &__grid {
+        width: calc(100vw - 350px);
+        height: calc(100vh - 76px);
+        display: grid;
+        grid-template-areas: 
+        "container"
+        ".";
+        grid-template-rows: 1fr 100px;
+        position: fixed;
+        
+        z-index: 2;
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            grid-area: container;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            
+
+            &__arrow {
+                height: 70px;
+                fill: $white;
+                margin: 80px ;
+                z-index: 2;
+                &:hover {
+                    fill: $sagey-grey;
+                }
+            }
+
+            &__img {
+                //height: 400px;
+                height: 70%;
+                width: 70%;
+                object-fit: contain;
+                z-index: 2;
+                margin: 0;
+                padding: 20px;
+                fill: $white;
+                transition: all 0.75s ease;
+                
+        
+                &:hover {
+                    fill: $sagey-grey;
+                }
+            }
+        }
+    }
+    
+}

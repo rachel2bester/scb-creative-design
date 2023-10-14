@@ -4,6 +4,8 @@
 
 .photo-panel {
     width: 100%;
+    
+    position: relative;
     &__content {
         padding: 30px;
         &__img {

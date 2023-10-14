@@ -1,10 +1,11 @@
 import React from 'react'
 import "./MainHeading.scss"
 
-const MainHeading = ({title}) => {
+const MainHeading = ({title, white}) => {
+    const headingClassName = white ? 'main-heading main-heading--white' : 'main-heading';
 
     return (
-        <h1 className='main-heading'>{title}</h1>
+        <h1 className={headingClassName}>{title}</h1>
     )
 }
 

@@ -10,8 +10,7 @@ const SideBar = ({dark, text}) => {
 
     return (
         <div className={sideBarClassName}>
-            <div></div>
-            <MainHeading title={"Interiors"}/>
+            <MainHeading title={"Interiors"} white={dark}/>
             <div className="side-bar__container" >
                 <LazyLoadText 
                     className={"side-bar__container__text"}

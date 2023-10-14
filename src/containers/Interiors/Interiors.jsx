@@ -5,22 +5,30 @@ import MainHeading from "../../components/MainHeading/MainHeading";
 import Footer from "../Footer/Footer";
 import SideBar from "../../components/SideBar/SideBar";
 import PhotoPanel from "../PhotoPanel/PhotoPanel";
+import { useState } from "react";
 
 const Interiors = (props) => {
-    const { toggleDisplayPopUp, displayPopUp, closePopUp} = props;
+    const { toggleDisplayNavPopUp, displayNavPopup} = props;
+    
+    const [displayPhotoPopup, setDisplayPhotoPopup] = useState(true);
+    document.body.style.overflow = "hidden"
+
+    const toggleDisplayPhotoPopup = () => {
+        setDisplayPhotoPopup(!displayPhotoPopup);
+    };
 
     return (
-        <>
-            <Header displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp} navClear={false} popupClear={false}/>
-            <SideBar dark={false}/>
-            <div className="interiors"> 
-                <div className="interiors__content">
-                    <PhotoPanel />
-                    <Footer dark={true}/>
-                </div>
-                
-            </div> 
-        </>
+        <div className="interiors"> 
+        
+            <Header displayNavPopup={displayNavPopup} toggleDisplayNavPopUp={toggleDisplayNavPopUp} navClear={false} popupClear={false}/>
+            <SideBar dark={displayPhotoPopup}/>
+        
+            <div className="interiors__content">
+                <PhotoPanel toggleDisplayPhotoPopup={toggleDisplayPhotoPopup} displayPhotoPopup={displayPhotoPopup}/>
+                <Footer dark={true}/>
+            </div>
+            
+        </div> 
     );
 };
 
