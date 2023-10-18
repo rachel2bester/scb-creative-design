@@ -5,7 +5,7 @@ import NavButtons from '../../components/NavButtons/NavButtons';
 import "./Nav.scss"
 
 const Nav = (props) => {
-    const {toggleDisplayPopUp, displayPopUp, clear, closePopUp} = props;
+    const {toggleDisplayNavPopup, displayNavPopup, clear, closePopup} = props;
 
     var navClassName;
     var navLogoClassName;
@@ -28,7 +28,7 @@ const Nav = (props) => {
 
     return (
         <div className={navClassName}>
-            <Link to="/" onClick={closePopUp}>
+            <Link to="/" onClick={closePopup}>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780.000000 386.000000" preserveAspectRatio="xMidYMid meet" className={navLogoClassName}>
                     <g transform="translate(0.000000,386.000000) scale(0.100000,-0.100000)" stroke="none">
                         <path d="M50 1935 l0 -1855 3850 0 3850 0 0 1855 0 1855 -3850 0 -3850 0 0 -1855z m7590 0 l0 -1745 -3740 0 -3740 0 0 1745 0 1745 3740 0 3740 0 0 -1745z"/>
@@ -47,12 +47,12 @@ const Nav = (props) => {
                 </svg>
             </Link>
             <div className={navButtonsClassName}>
-                <NavButtons closePopUp={closePopUp}/>
+                <NavButtons closePopup={closePopup}/>
             </div>
             
-            {displayPopUp 
-                ? <CloseButton className={navBarsClassName} onClick={toggleDisplayPopUp}/>
-                : <svg viewBox="0 0 32 32" className={navBarsClassName} onClick={toggleDisplayPopUp}>
+            {displayNavPopup 
+                ? <CloseButton className={navBarsClassName} onClick={toggleDisplayNavPopup}/>
+                : <svg viewBox="0 0 32 32" className={navBarsClassName} onClick={toggleDisplayNavPopup}>
                     <path d="M 4 7 L 4 9 L 28 9 L 28 7 Z M 4 15 L 4 17 L 28 17 L 28 15 Z M 4 23 L 4 25 L 28 25 L 28 23 Z"/>
                 </svg>
             }

@@ -11,10 +11,18 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
 
-const Home = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
+const Home = () => {
+
+    const [displayNavPopup, setDisplayNavPopup] = useState(false);
     const [navClear, setNavClear] = useState(true);
     const [popupClear, setPopupClear] = useState(true);
     const [scrollY, setScrollY] = useState(0);
+
+    const toggleDisplayNavPopup = () => {
+        setDisplayNavPopup(!displayNavPopup);
+    };
+
+
     const handleScroll = () => {
         setScrollY(window.scrollY);
         if (window.scrollY > window.innerHeight - 75) {
@@ -30,9 +38,9 @@ const Home = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
             setPopupClear(true)
         }
     }
+
     useEffect(() => {
         handleScroll();
-        
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
@@ -41,11 +49,11 @@ const Home = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
 
     return (
         <div className="home">
-            <Header displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp} navClear={navClear} popupClear={popupClear}/>
+            <Header displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} navClear={navClear} popupClear={popupClear}/>
         
             <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
                 <Scene pin>
-                    <LogoPanel displayPopUp={displayPopUp} scrollY={scrollY}/>
+                    <LogoPanel displayNavPopup={displayNavPopup} scrollY={scrollY}/>
                 </Scene>
                 <Scene pin>
                     <>

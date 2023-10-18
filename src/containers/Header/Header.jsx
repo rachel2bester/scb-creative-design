@@ -4,7 +4,7 @@ import Nav from "../Nav/Nav";
 import NavButtons from "../../components/NavButtons/NavButtons";
 
 const Header = (props) => {
-    const { toggleDisplayPopUp, displayPopUp, closePopUp, navClear, popupClear} = props;
+    const { toggleDisplayNavPopup, displayNavPopup, navClear, popupClear} = props;
 
     const popupClassName = popupClear ? "popup popup--clear" : "popup"
     const popupContentsClassName = popupClear ? "popup__contents popup__contents--clear" : "popup__contents"
@@ -13,15 +13,16 @@ const Header = (props) => {
     return (
         <>
             <Nav
-                toggleDisplayPopUp={toggleDisplayPopUp}
-                displayPopUp={displayPopUp}
-                closePopUp={closePopUp}
+                toggleDisplayNavPopup={toggleDisplayNavPopup}
+                displayNavPopup={displayNavPopup}
+                
                 clear={navClear}
             />
-            {displayPopUp &&
+
+            {displayNavPopup &&
                 <div className={popupClassName}>
                     <div className={popupContentsClassName}>
-                        <NavButtons closePopUp={closePopUp}/>
+                        <NavButtons />
                     </div>          
                 </div>
             }

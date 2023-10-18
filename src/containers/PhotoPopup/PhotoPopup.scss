@@ -3,8 +3,6 @@
 @use "../../assets/sass/reset" as *;
 
 .photo-popup {
-    
-    
 
     &__overlay{
         width: 100%;
@@ -14,6 +12,7 @@
         transition: all 0.75s ease;
         opacity: 80%;
         z-index: 1; 
+        transition: all 1s ease;
     }
 
     &__close {
@@ -36,17 +35,19 @@
         display: grid;
         grid-template-areas: 
         "container"
-        ".";
-        grid-template-rows: 1fr 100px;
+        "photoBar";
+        grid-template-rows: 1fr 150px;
         position: fixed;
-        
         z-index: 2;
 
         &__container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: grid;
             grid-area: container;
+            grid-template-columns: 160px 1fr 160px;
+            grid-template-rows: 1fr;
+            justify-items: center;
+            align-items: center;
+
             width: 100%;
             height: 100%;
             position: absolute;
@@ -55,7 +56,6 @@
             &__arrow {
                 height: 70px;
                 fill: $white;
-                margin: 80px ;
                 z-index: 2;
                 &:hover {
                     fill: $sagey-grey;
@@ -63,17 +63,13 @@
             }
 
             &__img {
-                //height: 400px;
-                height: 70%;
-                width: 70%;
+                max-height: 70%;
+                max-width: 70%;
                 object-fit: contain;
                 z-index: 2;
-                margin: 0;
-                padding: 20px;
                 fill: $white;
                 transition: all 0.75s ease;
                 
-        
                 &:hover {
                     fill: $sagey-grey;
                 }

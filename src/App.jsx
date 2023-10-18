@@ -5,22 +5,19 @@ import { Route, Routes, HashRouter as Router } from 'react-router-dom';
 import Interiors from './containers/Interiors/Interiors';
 import ContentProduction from './containers/ContentProduction/ContentProduction';
 import ContactUs from './containers/ContactUs/ContactUs';
+import dummyProjects from './assets/data/dummyProjects';
 
 function App() {
-    const [displayNavPopup, setDisplayNavPopup] = useState(false);
-
-    const toggleDisplayNavPopup = () => {
-        setDisplayNavPopup(!displayNavPopup);
-    };
+    
     
     return (
         <Router>
         <div className="App">
             <Routes>
-                <Route path='/' element={<Home displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} />}/>
-                <Route path='/interiors' element={<Interiors displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} />}/>
-                <Route path='/content-production' element={<ContentProduction displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} />}/>
-                <Route path='/contact-us' element={<ContactUs displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} />}/>
+                <Route path='/' element={<Home />}/>
+                <Route path='/interiors' element={<Interiors projects={dummyProjects}/>}/>
+                <Route path='/content-production' element={<ContentProduction  />}/>
+                <Route path='/contact-us' element={<ContactUs  />}/>
             </Routes>
             
         </div>

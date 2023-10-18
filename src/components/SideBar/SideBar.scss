@@ -15,8 +15,12 @@
     font-size: 13px;
     grid-area: sideBar;
 
-    &__heading {
-        padding-top: 80px;
+    &__subheading {
+        font-weight: bold;
+        padding: 10px;
+        font-size: 24px;
+        font-family: $primary-font-family;
+
     }
 
     &--dark {

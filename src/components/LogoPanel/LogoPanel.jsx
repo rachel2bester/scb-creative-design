@@ -4,13 +4,13 @@ import desktopImg from "../../assets/images/desktop-image.WEBP";
 import { useState, useEffect, useRef } from 'react';
 
 
-const LogoPanel = ({ displayPopUp, scrollY}) => {
+const LogoPanel = ({ displayNavPopup, scrollY}) => {
     
     const [logoHeight, setLogoHeight] = useState(0)
     const ref = useRef(null)
-    var logoMiddlePos = displayPopUp ? window.innerHeight / 2 - scrollY / 2  - logoHeight / 2 + 130 : window.innerHeight / 2 - scrollY / 2  - logoHeight / 2 + 35;
+    var logoMiddlePos = displayNavPopup ? window.innerHeight / 2 - scrollY / 2  - logoHeight / 2 + 130 : window.innerHeight / 2 - scrollY / 2  - logoHeight / 2 + 35;
     var logoPos;
-    if (displayPopUp) {
+    if (displayNavPopup) {
         logoPos = (logoMiddlePos > 260) ? logoMiddlePos : 260;
     } else {
         logoPos = (logoMiddlePos > 75) ? logoMiddlePos : 75;
