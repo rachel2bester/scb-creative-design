@@ -3,9 +3,21 @@
 @use "../../assets/sass/reset" as *;
 
 .photo-bar {
-    background-color: red;
     grid-area: photoBar;
-    
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x:scroll;
+    justify-content: safe center;
+
+    &__photo{
+        height: 80%;
+        &--selected {
+            background-color: $white;
+            border: $primary-color double 9px;;
+        }
+        
+    }
 }
 
 @media only screen and (min-aspect-ratio: 3/2) {

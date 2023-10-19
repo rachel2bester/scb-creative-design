@@ -7,7 +7,7 @@ import { useEffect, useState} from "react";
 
 
 
-const PhotoPanel = ({closePhotoPopup, displayPhotoPopup, displayedImages, onPhotoClick, currentImageIndex, project, incrementImageIndex, decrementImageIndex}) => {
+const PhotoPanel = ({closePhotoPopup, displayPhotoPopup, displayedImages, onPhotoClick, currentImageIndex, project, incrementImageIndex, decrementImageIndex, projectIndex}) => {
 
     const [displayedImagesJSX, setDisplayedImagesJSX] = useState(0);
     
@@ -32,13 +32,20 @@ const PhotoPanel = ({closePhotoPopup, displayPhotoPopup, displayedImages, onPhot
         <>
         {
             displayPhotoPopup && 
-                <PhotoPopup closePhotoPopup={closePhotoPopup} project={project} currentImageIndex={currentImageIndex} incrementImageIndex={incrementImageIndex} decrementImageIndex={decrementImageIndex} onPhotoClick={onPhotoClick}/>
+                <PhotoPopup 
+                    closePhotoPopup={closePhotoPopup} 
+                    project={project} 
+                    currentImageIndex={currentImageIndex} 
+                    incrementImageIndex={incrementImageIndex} 
+                    decrementImageIndex={decrementImageIndex} 
+                    onPhotoClick={onPhotoClick}
+                    projectIndex={projectIndex}
+                />
         }
 
         <div className="photo-panel">
             <ResponsiveMasonry
                 className="photo-panel__content"
-                
                 columnsCountBreakPoints={{100: 1, 750: 2, 950: 3, 1200: 4}}
             >
                 <Masonry gutter={"20px"}>

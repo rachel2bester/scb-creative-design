@@ -1,0 +1,56 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+@use "../../assets/sass/reset" as *;
+
+.carousel {
+    width: calc(100vw - 350px);
+    height: calc(100vh - 76px);
+    display: grid;
+    grid-template-areas: 
+    "container"
+    "photoBar";
+    grid-template-rows: 1fr 150px;
+    position: fixed;
+    z-index: 2;
+
+    &__container {
+        display: grid;
+        grid-area: container;
+        grid-template-columns: 160px 1fr 160px;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: center;
+        height: 100%;
+        width:100%;
+        position: absolute;
+        
+        &__arrow {
+            height: 70px;
+            fill: $white;
+            z-index: 2;
+            &:hover {
+                fill: $sagey-grey;
+            }
+        }
+
+        &__img-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            height: 100%;
+            width: 100%;
+
+            &__img {
+                max-height: calc(100vh - 276px);
+                max-width: 100%;
+                object-fit: contain;
+                z-index: 2;
+                fill: $white;
+                transition: all 0.75s ease;
+            }
+        }
+
+        
+    }
+}

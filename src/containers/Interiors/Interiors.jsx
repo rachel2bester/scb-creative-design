@@ -58,7 +58,6 @@ const Interiors = (props) => {
         const idSplit = event.target.id.split("_")
         setProjectIndex(parseInt(idSplit[1]))
         setImageIndex(parseInt(idSplit[2]))
-        console.log(event.target.id)
     };
 
     const displayedImages = [];
@@ -92,6 +91,7 @@ const Interiors = (props) => {
                     incrementImageIndex={incrementImageIndex}
                     decrementImageIndex={decrementImageIndex}
                     project={project}
+                    projectIndex={projectIndex}
                 />
                 <Footer dark={true}/>
             </div>
