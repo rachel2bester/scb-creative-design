@@ -31,7 +31,23 @@ const Interiors = (props) => {
         }
     }
 
+    const incrementProjectIndex = () => {
+        setImageIndex(0)
+        if (projectIndex >= projects.length - 1) {
+            setProjectIndex(0)
+        } else {
+            setProjectIndex(projectIndex + 1)
+        }
+    }
 
+    const decrementProjectIndex = () => {
+        setImageIndex(0)
+        if (projectIndex <= 0) {
+            setProjectIndex(projects.length - 1)
+        } else {
+            setProjectIndex(projectIndex - 1)
+        }
+    }
 
     const closePhotoPopup = () => {
         setProjectIndex(null)
@@ -59,7 +75,12 @@ const Interiors = (props) => {
     return (
         <div className="interiors"> 
             <Header displayNavPopup={displayNavPopup} toggleDisplayNavPopUp={toggleDisplayNavPopUp} navClear={false} popupClear={false}/>
-            <SideBar dark={displayPhotoPopup} project={project}/>
+            <SideBar 
+                dark={displayPhotoPopup} 
+                project={project} 
+                incrementProjectIndex={incrementProjectIndex}
+                decrementProjectIndex={decrementProjectIndex}
+            />
         
             <div className="interiors__content">
                 <PhotoPanel 
