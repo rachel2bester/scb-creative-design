@@ -54,3 +54,32 @@
         
     }
 }
+
+
+@media only screen and (max-width: 1000px) {
+    .carousel {
+        &__container {
+            grid-template-columns: 80px 1fr 80px;
+            &__arrow {
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    .carousel {
+        grid-template-rows: 1fr 120px;
+        &__container {
+            &__arrow {
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    .carousel {
+        
+    }
+}

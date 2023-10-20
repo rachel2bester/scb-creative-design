@@ -7,18 +7,38 @@
     display: flex;
     align-items: center;
     width: 100%;
-    overflow-x:scroll;
+    overflow-x:auto;
+    scrollbar-color: $primary-color $sagey-grey;
+    scrollbar-width: thin;
     justify-content: safe center;
+    margin-bottom: 10px;
+
+    &::-webkit-scrollbar {
+        height: 6px;
+
+        &-track {
+            background: transparent;
+            border: $secondary-color 2px solid; 
+            
+        }
+        &-thumb {
+            background-color: $secondary-color;
+            border: $secondary-color 2px solid;
+        }
+    }
+
+    
 
     &__photo{
         height: 80%;
         &--selected {
             background-color: $white;
             border: $primary-color double 9px;;
-        }
-        
+            justify-self: center;
+        } 
     }
 }
+
 
 @media only screen and (min-aspect-ratio: 3/2) {
     .photo-bar {

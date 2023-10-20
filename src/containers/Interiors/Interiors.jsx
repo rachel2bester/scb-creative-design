@@ -11,6 +11,7 @@ const Interiors = (props) => {
     const { toggleDisplayNavPopUp, displayNavPopup, projects} = props;
     const [projectIndex, setProjectIndex] = useState(null); 
     const [imageIndex, setImageIndex] = useState(null); 
+    const [displaySideBar, setDisplaySideBar] = useState(false); 
 
     const displayPhotoPopup = (imageIndex != null && projectIndex != null)
     const project = projects[projectIndex]
@@ -74,12 +75,14 @@ const Interiors = (props) => {
     return (
         <div className="interiors"> 
             <Header displayNavPopup={displayNavPopup} toggleDisplayNavPopUp={toggleDisplayNavPopUp} navClear={false} popupClear={false}/>
-            <SideBar 
-                dark={displayPhotoPopup} 
-                project={project} 
-                incrementProjectIndex={incrementProjectIndex}
-                decrementProjectIndex={decrementProjectIndex}
-            />
+            {displaySideBar &&
+                <SideBar 
+                    dark={displayPhotoPopup} 
+                    project={project} 
+                    incrementProjectIndex={incrementProjectIndex}
+                    decrementProjectIndex={decrementProjectIndex}
+                />
+            }
         
             <div className="interiors__content">
                 <PhotoPanel 
