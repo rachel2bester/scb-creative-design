@@ -3,12 +3,12 @@ import LazyLoadText from "../LazyLoadText/LazyLoadText";
 import MainHeading from "../MainHeading/MainHeading";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import "./SideBar.scss";
+import Arrow from "../Arrow/Arrow";
 
 
-const SideBar = ({project, decrementProjectIndex, incrementProjectIndex}) => {
+const SideBar = ({project, decrementProjectIndex, incrementProjectIndex, displaySideBar, toggleDisplaySideBar}) => {
 
-    var sideBarClassName, title, text, dark, instruction
-
+    var sideBarClassName, title, text, dark, instruction, sideBarButtonClassName, sideBarInstructionClassName, sideBarContainerClassName
 
     if (project) {
         sideBarClassName = "side-bar side-bar--dark"
@@ -24,40 +24,43 @@ const SideBar = ({project, decrementProjectIndex, incrementProjectIndex}) => {
         instruction = "Click on a photo to explore our projects."
     }
 
-
+    if (!displaySideBar) {
+        sideBarClassName = sideBarClassName + " side-bar--hidden"
+        sideBarButtonClassName = dark ? "side-bar__button side-bar__button--show side-bar__button--dark" : "side-bar__button side-bar__button--show"
+        sideBarInstructionClassName ="side-bar__instruction side-bar__instruction--hidden"
+        sideBarContainerClassName = "side-bar__container side-bar__container--hidden"
+    } else {
+        sideBarButtonClassName = dark ? "side-bar__button side-bar__button--hide side-bar__button--dark" : "side-bar__button side-bar__button--hide"
+        sideBarInstructionClassName = "side-bar__instruction"
+        sideBarContainerClassName ="side-bar__container"
+    }
+    
     return (
         <div className={sideBarClassName}>
             <MainHeading title={"Interiors"} white={dark}/>
-            <div className="side-bar__container" >
+            <div className={sideBarContainerClassName} >
                 {project && <div className="side-bar__subheading" >{project.projectName}</div>}
                 <LazyLoadText 
                     className={"side-bar__container__text"}
                     text={text}
                 />
             </div>
-            <div className={"side-bar__instruction"}>
+            <div className={sideBarInstructionClassName}>
                 <p>{instruction}</p>
                 {project && 
                     <div className="side-bar__instruction__arrows">
-                        <svg 
-                            onClick={decrementProjectIndex}
-                            className="photo-popup__grid__container__arrow"
-                            viewBox="0 0 330 330"
-                        >
-                            <path  d="M111.213,165.004L250.607,25.607c5.858-5.858,5.858-15.355,0-21.213c-5.858-5.858-15.355-5.858-21.213,0.001
-                                l-150,150.004C76.58,157.211,75,161.026,75,165.004c0,3.979,1.581,7.794,4.394,10.607l150,149.996
-                                C232.322,328.536,236.161,330,240,330s7.678-1.464,10.607-4.394c5.858-5.858,5.858-15.355,0-21.213L111.213,165.004z" />
-                        </svg>
-                        <svg 
-                            onClick={incrementProjectIndex}
-                            className="photo-popup__grid__container__arrow"
-                            viewBox="0 0 330 330"
-                        >
-                            <path transform="scale (-1, 1)" transform-origin="center" d="M111.213,165.004L250.607,25.607c5.858-5.858,5.858-15.355,0-21.213c-5.858-5.858-15.355-5.858-21.213,0.001
-                                l-150,150.004C76.58,157.211,75,161.026,75,165.004c0,3.979,1.581,7.794,4.394,10.607l150,149.996
-                                C232.322,328.536,236.161,330,240,330s7.678-1.464,10.607-4.394c5.858-5.858,5.858-15.355,0-21.213L111.213,165.004z" />
-                        </svg>
+                        <Arrow onClick={decrementProjectIndex} />
+                        <Arrow onClick={decrementProjectIndex} right/>
                     </div>
+                }
+            </div>
+            <div className={sideBarButtonClassName} onClick={toggleDisplaySideBar}>
+            
+                                
+                {displaySideBar ?
+                    <svg viewBox="0 0 24 24" transform="scale (-1, 1)" 
+                    transform-origin="center"><path d="M4,2H2V22H4V13H18.17L12.67,18.5L14.08,19.92L22,12L14.08,4.08L12.67,5.5L18.17,11H4V2Z" /></svg> :
+                    <svg viewBox="0 0 24 24"><path d="M4,2H2V22H4V13H18.17L12.67,18.5L14.08,19.92L22,12L14.08,4.08L12.67,5.5L18.17,11H4V2Z" /></svg>
                 }
             </div>
         </div>

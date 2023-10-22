@@ -1,13 +1,13 @@
 import React from 'react'
 import NavButton from '../NavButton/NavButton'
 
-const NavButtons = ({closePopUp}) => {
+const NavButtons = ({closeNavPopup}) => {
     
     return (
         <>
-            <NavButton title="Interiors" linkTo="/interiors" closePopUp={closePopUp}/>
-            <NavButton title="Content Production" linkTo="/content-production" closePopUp={closePopUp}/>
-            <NavButton title="Contact Us" linkTo="/contact-us" closePopUp={closePopUp}/>
+            <NavButton title="Interiors" linkTo="/interiors" onClick={closeNavPopup}/>
+            <NavButton title="Content Production" linkTo="/content-production" onClick={closeNavPopup}/>
+            <NavButton title="Contact Us" linkTo="/contact-us" onClick={closeNavPopup}/>
         </>
     )
 }

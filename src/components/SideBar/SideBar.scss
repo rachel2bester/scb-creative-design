@@ -63,14 +63,63 @@
                 }
             }
         }
-        
+    }
+
+    &__button {
+        display: none;
     }
 }
 
 @media only screen and (max-width: 700px) {
     .side-bar {
-        padding-top: 76px;
-        width: 350px;
         z-index: 1;
+        transition: 1s;
+        overflow-x: hidden;
+
+        &--hidden {
+            overflow-x: hidden;
+            padding: 0px;
+            transition: 1s;
+        }
+
+        &__container {
+            &__text {
+                width: 284px;
+            }
+        }
+
+        &__button {
+            background-color: $white;
+            border: double $primary-color 6px;
+            position: absolute;
+            top: 150px;
+            visibility: visible;
+            height: 54px;
+            width: 54px;
+            fill: $primary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                height: 35px;
+            }
+
+            &--dark {
+                border: double $primary-color 6px;
+                background-color: $secondary-color;
+                fill: $white;
+            }
+    
+            &--hide {
+                left: 314px;
+                transition: 1s;
+                
+            }
+            &--show {
+                left: 0px;
+                transition: 1s;
+                width: 44px;
+            }
+        }
     }
 }

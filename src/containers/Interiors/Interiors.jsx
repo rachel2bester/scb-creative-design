@@ -8,13 +8,20 @@ import PhotoPanel from "../PhotoPanel/PhotoPanel";
 import { useState } from "react";
 
 const Interiors = (props) => {
-    const { toggleDisplayNavPopUp, displayNavPopup, projects} = props;
+    const { toggleDisplayNavPopup, displayNavPopup, projects, closeNavPopup} = props;
     const [projectIndex, setProjectIndex] = useState(null); 
     const [imageIndex, setImageIndex] = useState(null); 
-    const [displaySideBar, setDisplaySideBar] = useState(false); 
+    const [displaySideBar, setDisplaySideBar] = useState(true); 
+
+    const interiorsClassName = displaySideBar ? "interiors" : "interiors interiors--no-sidebar"
+    
 
     const displayPhotoPopup = (imageIndex != null && projectIndex != null)
     const project = projects[projectIndex]
+
+    const toggleDisplaySideBar = () => {
+        setDisplaySideBar(!displaySideBar)
+    }
 
     const incrementImageIndex = () => {
         if (imageIndex >= project.images.length - 1) {
@@ -73,16 +80,17 @@ const Interiors = (props) => {
     });
 
     return (
-        <div className="interiors"> 
-            <Header displayNavPopup={displayNavPopup} toggleDisplayNavPopUp={toggleDisplayNavPopUp} navClear={false} popupClear={false}/>
-            {displaySideBar &&
-                <SideBar 
-                    dark={displayPhotoPopup} 
-                    project={project} 
-                    incrementProjectIndex={incrementProjectIndex}
-                    decrementProjectIndex={decrementProjectIndex}
-                />
-            }
+        <div className={interiorsClassName}> 
+            <Header displayNavPopup={displayNavPopup} closeNavPopup={closeNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} navClear={false} popupClear={false}/>
+            
+            <SideBar 
+                dark={displayPhotoPopup} 
+                displaySideBar={displaySideBar}
+                project={project} 
+                incrementProjectIndex={incrementProjectIndex}
+                decrementProjectIndex={decrementProjectIndex}
+                toggleDisplaySideBar={toggleDisplaySideBar}
+            />
         
             <div className="interiors__content">
                 <PhotoPanel 

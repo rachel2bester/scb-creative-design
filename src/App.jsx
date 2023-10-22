@@ -8,14 +8,23 @@ import ContactUs from './containers/ContactUs/ContactUs';
 import dummyProjects from './assets/data/dummyProjects';
 
 function App() {
+
+    const [displayNavPopup, setDisplayNavPopup] = useState(false);
+    const toggleDisplayNavPopup = () => {
+        setDisplayNavPopup(!displayNavPopup);
+    };
+
+    const closeNavPopup = () => {
+        setDisplayNavPopup(false);
+    };
     
     
     return (
         <Router>
         <div className="App">
             <Routes>
-                <Route path='/' element={<Home />}/>
-                <Route path='/interiors' element={<Interiors projects={dummyProjects}/>}/>
+                <Route path='/' element={<Home displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} closeNavPopup={closeNavPopup}/>}/>
+                <Route path='/interiors' element={<Interiors projects={dummyProjects} displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} closeNavPopup={closeNavPopup}/>}/>
                 <Route path='/content-production' element={<ContentProduction  />}/>
                 <Route path='/contact-us' element={<ContactUs  />}/>
             </Routes>

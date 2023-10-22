@@ -11,17 +11,11 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
 
-const Home = () => {
+const Home = ({toggleDisplayNavPopup, displayNavPopup, closeNavPopup}) => {
 
-    const [displayNavPopup, setDisplayNavPopup] = useState(false);
     const [navClear, setNavClear] = useState(true);
     const [popupClear, setPopupClear] = useState(true);
     const [scrollY, setScrollY] = useState(0);
-
-    const toggleDisplayNavPopup = () => {
-        setDisplayNavPopup(!displayNavPopup);
-    };
-
 
     const handleScroll = () => {
         setScrollY(window.scrollY);
@@ -49,8 +43,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Header displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} navClear={navClear} popupClear={popupClear}/>
-        
+            <Header displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} navClear={navClear} popupClear={popupClear} closeNavPopup={closeNavPopup}/>
             <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
                 <Scene pin>
                     <LogoPanel displayNavPopup={displayNavPopup} scrollY={scrollY}/>
