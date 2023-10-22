@@ -46,11 +46,11 @@ const PhotoPanel = ({closePhotoPopup, displayPhotoPopup, displayedImages, onPhot
         <div className="photo-panel">
             <ResponsiveMasonry
                 className="photo-panel__content"
-                columnsCountBreakPoints={{100: 1, 750: 2, 950: 3, 1200: 4}}
+                columnsCountBreakPoints={{100: 1, 850: 2, 1200: 3, 1800: 4}}
             >
-                <Masonry gutter={"20px"}>
-                    {displayedImagesJSX}
-                </Masonry>
+            <Masonry gutter={"20px"}>
+                {displayedImagesJSX}
+            </Masonry>
             </ResponsiveMasonry >
             
         </div>

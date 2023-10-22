@@ -5,7 +5,7 @@ import { Route, Routes, HashRouter as Router } from 'react-router-dom';
 import Interiors from './containers/Interiors/Interiors';
 import ContentProduction from './containers/ContentProduction/ContentProduction';
 import ContactUs from './containers/ContactUs/ContactUs';
-import dummyProjects from './assets/data/dummyProjects';
+import dummyProjects from './assets/data/projects';
 
 function App() {
 

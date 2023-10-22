@@ -14,7 +14,6 @@ const Interiors = (props) => {
     const [displaySideBar, setDisplaySideBar] = useState(true); 
 
     const interiorsClassName = displaySideBar ? "interiors" : "interiors interiors--no-sidebar"
-    
 
     const displayPhotoPopup = (imageIndex != null && projectIndex != null)
     const project = projects[projectIndex]
