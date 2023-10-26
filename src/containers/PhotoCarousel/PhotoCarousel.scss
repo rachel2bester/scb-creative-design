@@ -4,7 +4,7 @@
 
 .carousel {
     width: calc(100vw - 350px);
-    height: calc(100vh - 76px);
+    height: calc(100dvh - 76px);
     display: grid;
     grid-template-areas: 
     "container"
@@ -49,15 +49,21 @@
                 fill: $white;
                 transition: all 0.75s ease;
             }
-        }
-
-        
+        }        
     }
 }
 
 @media only screen and (max-width: 700px) {
     .carousel {
         width: 100%;
+        &__container {
+            &__arrow {
+                &--hidden {
+                    opacity: 0%;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
     }
 }
 
@@ -79,6 +85,7 @@
         &__container {
             &__arrow {
                 height: 40px;
+                
             }
         }
     }

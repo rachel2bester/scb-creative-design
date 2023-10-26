@@ -31,13 +31,13 @@
     }
 }
 
-@media only screen and (max-width: 700px) {
-    .photo-panel {
 
-        &__content {
-            padding: 40px;
-            
+
+@media only screen and (max-width: 420px) {
+    .photo-popup {
+        &__close--hidden {
+            opacity: 0%;
+            transition: all ease 1s;
         }
     }
 }
-

@@ -2,15 +2,17 @@ import React from "react";
 import PhotoBar from "../../components/PhotoBar/PhotoBar";
 import "./PhotoCarousel.scss";
 
-const PhotoCarousel = ({ images, incrementImageIndex, decrementImageIndex, onPhotoClick, currentImageIndex, projectIndex}) => {
+const PhotoCarousel = ({ images, incrementImageIndex, decrementImageIndex, onPhotoClick, currentImageIndex, projectIndex, displaySideBar}) => {
     const image = images[currentImageIndex]
+    const arrowClassName = displaySideBar ? "carousel__container__arrow carousel__container__arrow--hidden" : "carousel__container__arrow";
 
     return (
         <div className="carousel">
             <div className='carousel__container'>
+                
                 <svg 
                     onClick={decrementImageIndex}
-                    className="carousel__container__arrow"
+                    className={arrowClassName}
                     viewBox="0 0 330 330"
                 >
                     <path  d="M111.213,165.004L250.607,25.607c5.858-5.858,5.858-15.355,0-21.213c-5.858-5.858-15.355-5.858-21.213,0.001
@@ -22,7 +24,7 @@ const PhotoCarousel = ({ images, incrementImageIndex, decrementImageIndex, onPho
                 </div>
                 <svg 
                     onClick={incrementImageIndex}
-                    className="carousel__container__arrow"
+                    className={arrowClassName}
                     viewBox="0 0 330 330"
                 >
                     <path transform="scale (-1, 1)" transform-origin="center" d="M111.213,165.004L250.607,25.607c5.858-5.858,5.858-15.355,0-21.213c-5.858-5.858-15.355-5.858-21.213,0.001

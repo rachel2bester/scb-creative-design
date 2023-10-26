@@ -7,6 +7,7 @@
     grid-template-columns: 350px 1fr;
     grid-template-rows: 76px 1fr;
     height:100vh;
+    max-height: -webkit-fill-available;
     transition: 1s;
 
     grid-template-areas: 

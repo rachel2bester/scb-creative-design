@@ -7,7 +7,7 @@ import { useEffect, useState} from "react";
 
 
 
-const PhotoPanel = ({closePhotoPopup, displayPhotoPopup, displayedImages, onPhotoClick, currentImageIndex, project, incrementImageIndex, decrementImageIndex, projectIndex}) => {
+const PhotoPanel = ({closePhotoPopup, displayPhotoPopup, displayedImages, onPhotoClick, currentImageIndex, project, incrementImageIndex, decrementImageIndex, projectIndex, displaySideBar}) => {
 
     const [displayedImagesJSX, setDisplayedImagesJSX] = useState(0);
     
@@ -39,6 +39,7 @@ const PhotoPanel = ({closePhotoPopup, displayPhotoPopup, displayedImages, onPhot
                     incrementImageIndex={incrementImageIndex} 
                     decrementImageIndex={decrementImageIndex} 
                     onPhotoClick={onPhotoClick}
+                    displaySideBar={displaySideBar}
                     projectIndex={projectIndex}
                 />
         }

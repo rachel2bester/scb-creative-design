@@ -5,12 +5,14 @@ import PhotoCarousel from "../PhotoCarousel/PhotoCarousel";
 
 
 
-const PhotoPopup = ({closePhotoPopup, project, currentImageIndex, incrementImageIndex, decrementImageIndex, onPhotoClick, projectIndex}) => {
+const PhotoPopup = ({closePhotoPopup, project, currentImageIndex, incrementImageIndex, decrementImageIndex, onPhotoClick, projectIndex, displaySideBar}) => {
     
+    const closeClassName = displaySideBar ? "photo-popup__close photo-popup__close--hidden" : "photo-popup__close";
+
     return (
         <div className="photo-popup">
             <div className="photo-popup__overlay"></div>
-            <CloseButton className={"photo-popup__close"} onClick={closePhotoPopup}/>
+            <CloseButton className={closeClassName} onClick={closePhotoPopup}/>
             <PhotoCarousel 
                 images={project.images}
                 currentImageIndex={currentImageIndex}
@@ -18,8 +20,8 @@ const PhotoPopup = ({closePhotoPopup, project, currentImageIndex, incrementImage
                 decrementImageIndex={decrementImageIndex}
                 onPhotoClick={onPhotoClick}
                 projectIndex={projectIndex}
+                displaySideBar={displaySideBar}
             />
-            
         </div>
     );
 };

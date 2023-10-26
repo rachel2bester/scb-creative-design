@@ -91,6 +91,8 @@ const Interiors = (props) => {
                 decrementProjectIndex={decrementProjectIndex}
                 toggleDisplaySideBar={toggleDisplaySideBar}
             />
+
+            
         
             <div className="interiors__content">
                 <PhotoPanel 
@@ -103,6 +105,7 @@ const Interiors = (props) => {
                     decrementImageIndex={decrementImageIndex}
                     project={project}
                     projectIndex={projectIndex}
+                    displaySideBar={displaySideBar}
                 />
                 <Footer dark={true}/>
             </div>
