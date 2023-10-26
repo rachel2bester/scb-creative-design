@@ -19,11 +19,14 @@
         overflow-y: scroll;
         grid-area: content;
     }
+
+    &__sidebar-button {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 700px) {
     .interiors {
-        
         &__content {
             z-index: 0;
             overflow-x: hidden;
@@ -31,6 +34,40 @@
 
         &--no-sidebar {
             grid-template-columns: 0px 1fr;
+        }
+        &__sidebar-button {
+            z-index: 3;
+            background-color: $white;
+            border: double $primary-color 6px;
+            position: absolute;
+            bottom: 20vh;
+            visibility: visible;
+            height: 54px;
+            width: 54px;
+            fill: $primary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                height: 35px;
+            }
+
+            &--dark {
+                border: double $primary-color 6px;
+                background-color: $secondary-color;
+                fill: $white;
+            }
+    
+            &--hide {
+                left: 314px;
+                transition: 1s;
+                
+            }
+            &--show {
+                left: 0px;
+                transition: 1s;
+                width: 44px;
+            }
         }
     }
 

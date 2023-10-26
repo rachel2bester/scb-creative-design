@@ -12,11 +12,18 @@ const Interiors = (props) => {
     const [projectIndex, setProjectIndex] = useState(null); 
     const [imageIndex, setImageIndex] = useState(null); 
     const [displaySideBar, setDisplaySideBar] = useState(true); 
+    var sideBarButtonClassName;
 
     const interiorsClassName = displaySideBar ? "interiors" : "interiors interiors--no-sidebar"
 
     const displayPhotoPopup = (imageIndex != null && projectIndex != null)
     const project = projects[projectIndex]
+
+    if (!displaySideBar) {
+        sideBarButtonClassName = displayPhotoPopup ? "interiors__sidebar-button interiors__sidebar-button--show interiors__sidebar-button--dark" : "interiors__sidebar-button interiors__sidebar-button--show"
+    } else {
+        sideBarButtonClassName = displayPhotoPopup ? "interiors__sidebar-button interiors__sidebar-button--hide interiors__sidebar-button--dark" : "interiors__sidebar-button interiors__sidebar-button--hide"
+    }
 
     const toggleDisplaySideBar = () => {
         setDisplaySideBar(!displaySideBar)
@@ -92,7 +99,21 @@ const Interiors = (props) => {
                 toggleDisplaySideBar={toggleDisplaySideBar}
             />
 
-            
+            <div className={sideBarButtonClassName} onClick={toggleDisplaySideBar}>           
+                {displaySideBar ?
+                    <svg 
+                        viewBox="0 0 24 24" 
+                        transform="scale (-1, 1)" 
+                        transform-origin="center"
+                    >
+                        <path d="M4,2H2V22H4V13H18.17L12.67,18.5L14.08,19.92L22,12L14.08,4.08L12.67,5.5L18.17,11H4V2Z" />
+                    </svg> 
+                    :
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4,2H2V22H4V13H18.17L12.67,18.5L14.08,19.92L22,12L14.08,4.08L12.67,5.5L18.17,11H4V2Z" />
+                    </svg>
+                }
+            </div>
         
             <div className="interiors__content">
                 <PhotoPanel 
