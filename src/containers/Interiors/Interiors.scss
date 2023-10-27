@@ -61,12 +61,13 @@
             &--hide {
                 left: 314px;
                 transition: 1s;
-                
+                transform: rotate(180deg);
             }
             &--show {
                 left: 0px;
                 transition: 1s;
                 width: 44px;
+                
             }
         }
     }
