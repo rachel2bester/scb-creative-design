@@ -6,7 +6,10 @@
     font-family: 'CA-saygon-light';
     src: url("../fonts/CASaygonText-Light.ttf") format("truetype");
  }
-
+ @font-face {
+   font-family: 'CA-saygon-thin';
+   src: url("../fonts/CASaygonText-Thin.ttf") format("truetype");
+}
 //colors
 $primary-color: rgb(27, 51, 43);//rgb(42, 65, 41);
 $secondary-color: rgb(58, 107, 89);
@@ -18,4 +21,5 @@ $black: black;
 //fonts
 $primary-font-family: copperplate-gothic;
 $secondary-font-family: CA-saygon-light;
+$secondary-font-family-thin: CA-saygon-thin;
 

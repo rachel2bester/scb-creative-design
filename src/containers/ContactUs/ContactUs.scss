@@ -5,27 +5,26 @@
 .contact-us {
     display: flex;
     justify-content: center;
-    background-color: $white;
-
+    background-color: $primary-color;
 
     &__content {
         width: 100%;
-        height:calc(100dvh - 82px);
+        height:calc(100dvh - 76px);
         margin-top: 76px;
         display: grid;
-        grid-template-areas: "title title title"
-            "email logo address"
-            "footer footer footer";
+        grid-template-areas: //"title title title"
+            "email logo address";
+            // "footer footer footer";
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 100px 1fr 100px;;
+        //grid-template-rows: 1fr 100px;
 
         &__title {
             grid-area: title;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: $sagey-grey;
-            border-bottom: double 6px $primary-color;
+            background-color: $primary-color;
+            border-bottom: double 6px $white;
         }
 
         &__email {
@@ -37,16 +36,19 @@
             align-items: center;
 
             &__svg {
-                width: 120px;
+                width: 100px;
                 fill: $white;
                 padding-bottom: 20px;
-
             }
             &__text {
                 color: $white;
                 font-family: $secondary-font-family;
                 font-size: 18px;
                 padding: 10px;
+                
+                &:hover {
+                    color: $sagey-grey;
+                }
             }
         }
 
@@ -54,13 +56,19 @@
             background-color: $sagey-grey;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-evenly;
+            flex-direction: column;
             border-left: double 6px $primary-color;
             border-right: double 6px $primary-color;
 
+            &__text {
+                font-family: $primary-font-family;
+                font-size: 80px;
+                color: $primary-color;
+            }
             
             &__logo {
-                width: 80%;
+                width: 70%;
                 fill: $primary-color;
             }
         }
@@ -72,15 +80,20 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
             &__svg {
                 width: 120px;
                 fill: $white;
+                &:hover {
+                    fill: $sagey-grey;
+                }
             }
             &__text {
                 color: $white;
                 font-family: $secondary-font-family;
                 font-size: 18px;
+                &:hover {
+                    color: $sagey-grey;
+                }
             }
         }
     }
