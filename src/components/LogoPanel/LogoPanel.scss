@@ -42,7 +42,6 @@
         width:100vw;
         height: 100vh;
     }
-
 }
 
 @media only screen and (min-aspect-ratio: 3/2) {
@@ -56,18 +55,11 @@
     }
 }
 
-@media only screen and (max-aspect-ratio: 3/2) {
-    .logo-panel {
-        &__img {
-            height: 100vh;
-        }
-    }
-}
 
 @media only screen and ((max-width: 650px)  or (min-height: 800px)) {
     .logo-panel {
         &__logo {
-            width: 80vw;
+            width: 70vw;
         }
     }
 }

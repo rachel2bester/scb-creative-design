@@ -22,9 +22,6 @@ const PhotoBar = ({images, currentImageIndex, onPhotoClick, projectIndex}) => {
             />
         )
     })
-
-    
-
     
     useEffect(() => {          
         const myElement = document.getElementsByClassName('photo-bar__photo--selected')[0];

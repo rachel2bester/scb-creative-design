@@ -20,7 +20,7 @@ const PhotoPanel = ({closePhotoPopup, displayPhotoPopup, displayedImages, onPhot
                     className='photo-panel__content__photo' 
                     key={"img_" + image.projectIndex + "_" + image.imageIndex}
                     id={"img_" + image.projectIndex + "_" + image.imageIndex}
-                    onClick={onPhotoClick}
+                    onClick={event => onPhotoClick(event, true)}
                 />
             )
         }).sort((a, b) => 0.5 - Math.random()))

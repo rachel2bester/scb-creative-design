@@ -5,8 +5,87 @@
 .contact-us {
     display: flex;
     justify-content: center;
+    background-color: $white;
+
 
     &__content {
-        margin: 90px;
+        width: 100%;
+        height:calc(100dvh - 82px);
+        margin-top: 76px;
+        display: grid;
+        grid-template-areas: "title title title"
+            "email logo address"
+            "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 1fr 100px;;
+
+        &__title {
+            grid-area: title;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $sagey-grey;
+            border-bottom: double 6px $primary-color;
+        }
+
+        &__email {
+            background-color: $primary-color;
+            grid-area: email;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__svg {
+                width: 120px;
+                fill: $white;
+                padding-bottom: 20px;
+
+            }
+            &__text {
+                color: $white;
+                font-family: $secondary-font-family;
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+
+        &__logo-panel {
+            background-color: $sagey-grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: double 6px $primary-color;
+            border-right: double 6px $primary-color;
+
+            
+            &__logo {
+                width: 80%;
+                fill: $primary-color;
+            }
+        }
+
+        &__address {
+            background-color: $primary-color;
+            grid-area: address;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__svg {
+                width: 120px;
+                fill: $white;
+            }
+            &__text {
+                color: $white;
+                font-family: $secondary-font-family;
+                font-size: 18px;
+            }
+        }
     }
+}
+
+a {
+    text-decoration: none;
 }

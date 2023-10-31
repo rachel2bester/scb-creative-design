@@ -68,11 +68,13 @@ const Interiors = (props) => {
         setImageIndex(null)
     };
 
-    const onPhotoClick = event => {
+    const onPhotoClick = (event, sidebar) => {
         const idSplit = event.target.id.split("_")
         setProjectIndex(parseInt(idSplit[1]))
         setImageIndex(parseInt(idSplit[2]))
-        setDisplaySideBar(true)
+        if (sidebar) {
+            setDisplaySideBar(true)
+        }  
     };
 
     const displayedImages = [];

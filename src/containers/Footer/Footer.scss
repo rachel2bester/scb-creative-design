@@ -12,6 +12,7 @@
     z-index: 3;
     color: $primary-color;
     border-top: double $primary-color 6px;
+    grid-area: footer;
 
     &--dark {
         color: $white;
