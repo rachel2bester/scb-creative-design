@@ -12,20 +12,8 @@
         height:calc(100dvh - 76px);
         margin-top: 76px;
         display: grid;
-        grid-template-areas: //"title title title"
-            "email logo address";
-            // "footer footer footer";
+        grid-template-areas: "email logo address";
         grid-template-columns: 1fr 1fr 1fr;
-        //grid-template-rows: 1fr 100px;
-
-        &__title {
-            grid-area: title;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: $primary-color;
-            border-bottom: double 6px $white;
-        }
 
         &__email {
             background-color: $primary-color;
@@ -53,13 +41,11 @@
         }
 
         &__logo-panel {
-            background-color: $sagey-grey;
+            background-color: $white;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             flex-direction: column;
-            border-left: double 6px $primary-color;
-            border-right: double 6px $primary-color;
 
             &__text {
                 font-family: $primary-font-family;
@@ -101,4 +87,226 @@
 
 a {
     text-decoration: none;
+}
+
+@media only screen and (min-aspect-ratio: 1) {
+    .contact-us {
+        &__content {
+            &__logo-panel {
+                border-left: double 6px $primary-color;
+                border-right: double 6px $primary-color;
+            }
+        }
+    }
+}
+
+@media only screen and (min-aspect-ratio: 1) and (max-width: 1300px) {
+    .contact-us {
+        &__content {
+            &__logo-panel {
+                &__text {
+                    font-size: 70px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-aspect-ratio: 1) and (max-width: 1100px) {
+    .contact-us {
+        &__content {
+            &__email {
+                &__svg {
+                    width: 70px;
+                }
+                &__text {
+                    font-size: 17px;
+                }
+            }
+            &__logo-panel {
+                &__text {
+                    font-size: 60px;
+                }
+            }
+
+            &__address {
+                &__svg {
+                    width: 70px;
+                }
+                &__text {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-aspect-ratio: 1) and (max-width: 950px) {
+    .contact-us {
+        &__content {
+            &__email {
+                &__svg {
+                    width: 70px;
+                }
+                &__text {
+                    font-size: 15px;
+                }
+            }
+
+            &__logo-panel {
+                &__text {
+                    font-size: 50px;
+                }
+            }
+            
+            &__address {
+                &__svg {
+                    width: 70px;
+                }
+                &__text {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-aspect-ratio: 1) and (max-width: 950px) {
+    .contact-us {
+        &__content {
+            &__email {
+                &__svg {
+                    width: 50px;
+                }
+                &__text {
+                    font-size: 12px;
+                }
+            }
+
+            &__logo-panel {
+                &__text {
+                    font-size: 35px;
+                }
+            }
+            
+            &__address {
+                &__svg {
+                    width: 50px;
+                }
+                &__text {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1) {
+    .contact-us {
+        &__content {
+            grid-template-areas: "email"
+                "logo"
+                "address";
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            &__email {
+
+                &__svg {
+                    width:50px;
+                }
+                &__text {
+                }
+            }
+
+            &__logo-panel {
+                border-top: double $primary-color 6px;
+                border-bottom: double $primary-color 6px;
+
+                &__text {
+                }
+                
+                &__logo {
+                    display: none;
+                }
+            }
+
+            &__address {
+                
+                &__svg {
+                    width: 50px;
+                }
+                &__text {
+                    
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1) and (max-width: 450px) {
+    .contact-us {
+        &__content {
+            &__logo-panel {
+                &__text {
+                    font-size: 65px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1) and (max-width: 350px) {
+    .contact-us {
+        &__content {
+            &__logo-panel {
+                &__text {
+                    font-size: 45px;
+                }
+            }
+            &__address {
+                &__text {
+                    font-size: 13px;
+                }
+            }
+            &__email {
+                &__text {
+                    font-size: 14px;;
+                }
+            }
+        }
+        
+    }
+}
+
+// @media only screen and (max-aspect-ratio: 1) and (max-width: 350px) {
+//     .contact-us {
+//         &__content {
+//             &__logo-panel {
+//                 &__text {
+//                     font-size: 45px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@media only screen and (max-aspect-ratio: 1) and (max-height: 700px) {
+    .contact-us {
+        &__content {
+            
+    
+            &__email {
+                &__text {
+                    font-size: 13px;
+                }
+            }
+    
+            &__address {
+                &__text {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
 }
