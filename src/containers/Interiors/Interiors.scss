@@ -72,5 +72,18 @@
             }
         }
     }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .interiors {
+        grid-template-columns: 500px 1fr;
+        transition: 0.5s all;
+        &--dark {
+            grid-template-columns: 350px 1fr;
+            
+        }
+    }
 
 }

@@ -1,8 +1,6 @@
 import React from 'react'
 import "./TheTeamPanel.scss"
 import SectionHeading from '../SectionHeading/SectionHeading';
-import LazyLoadText from '../LazyLoadText/LazyLoadText';
-import LazyLoadImg from '../LazyLoadImg/LazyLoadImg';
 import TeamMember from '../TeamMember/TeamMember';
 
 
@@ -13,21 +11,16 @@ const TheTeamPanel = () => {
             <SectionHeading title="The Team" white={true}/>
 
             <TeamMember 
-                teamMember="Team Member1"
+                teamMember="Caroline Cooney - Co-Director and Designer"
                 imgSrc="http://placekitten.com/600/600" 
                 text=
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia viverra lobortis. Quisque luctus at dui dapibus pellentesque. Nulla hendrerit tellus metus, ut tempus lectus mollis et. Maecenas mi orci, malesuada eget ligula ut, convallis fermentum orci. Vestibulum efficitur fermentum nunc, et suscipit purus finibus sed. Aliquam ullamcorper lectus leo, a ornare ligula volutpat vitae. Vivamus condimentum ligula quis aliquam sollicitudin. Curabitur rutrum dolor libero, sit amet posuere nulla iaculis ut. In venenatis dui sed metus rhoncus hendrerit. Sed ac lacus vel lectus malesuada rhoncus." 
+                    {<>Caroline, an interior and furniture design expert with over 30 years of experience, possesses a discerning eye and a deep knowledge of interior styling and design. She relishes in collaborating closely with clients, getting to know them in order to craft spaces that they adore within specified budgets. Her versatile background spans creative domains, including domestic and corporate design. Caroline's expertise also extends to sourcing and delivering exquisite South African furnishings worldwide. Moreover, she is an adept creative project manager, having handled event design and production."</>} 
             />
-            <TeamMember teamMember="Team Member2"
+            <TeamMember teamMember="James Cooney - Creative Producer"
                 imgSrc="http://placekitten.com/600/600" 
                 text=
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia viverra lobortis. Quisque luctus at dui dapibus pellentesque. Nulla hendrerit tellus metus, ut tempus lectus mollis et. Maecenas mi orci, malesuada eget ligula ut, convallis fermentum orci. Vestibulum efficitur fermentum nunc, et suscipit purus finibus sed. Aliquam ullamcorper lectus leo, a ornare ligula volutpat vitae. Vivamus condimentum ligula quis aliquam sollicitudin. Curabitur rutrum dolor libero, sit amet posuere nulla iaculis ut. In venenatis dui sed metus rhoncus hendrerit. Sed ac lacus vel lectus malesuada rhoncus." 
+                    {<>James is a multi-disciplinary creative professional, holding a recent Master of Arts in Creative Producing from a top arts university in London. His extensive studies and hands-on experience have honed his project planning and execution skills. Growing up in a creative environment, he is well-prepared to manage client's artistic content and design endeavours. With a background in team management, James has contributed to creative projects in collaboration with prestigious institutions like the BBC and The Royal Central School of Speech and Drama. He possesses a keen eye for innovation, creative content, script editing, and design.</>} 
                 swapped
-            />
-            <TeamMember teamMember="Team Member3"
-                imgSrc="http://placekitten.com/600/600" 
-                text=
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia viverra lobortis. Quisque luctus at dui dapibus pellentesque. Nulla hendrerit tellus metus, ut tempus lectus mollis et. Maecenas mi orci, malesuada eget ligula ut, convallis fermentum orci. Vestibulum efficitur fermentum nunc, et suscipit purus finibus sed. Aliquam ullamcorper lectus leo, a ornare ligula volutpat vitae. Vivamus condimentum ligula quis aliquam sollicitudin. Curabitur rutrum dolor libero, sit amet posuere nulla iaculis ut. In venenatis dui sed metus rhoncus hendrerit. Sed ac lacus vel lectus malesuada rhoncus." 
             />
         </div>
     )

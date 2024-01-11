@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Home from './containers/Home/Home';
 import { Route, Routes, HashRouter as Router } from 'react-router-dom';
 import Interiors from './containers/Interiors/Interiors';
-import ContentProduction from './containers/ContentProduction/ContentProduction';
+import CreativeProduction from './containers/CreativeProduction/CreativeProduction';
 import ContactUs from './containers/ContactUs/ContactUs';
 import dummyProjects from './assets/data/projects';
 
@@ -25,7 +25,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<Home displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} closeNavPopup={closeNavPopup}/>}/>
                 <Route path='/interiors' element={<Interiors projects={dummyProjects} displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} closeNavPopup={closeNavPopup}/>}/>
-                <Route path='/content-production' element={<ContentProduction  />}/>
+                <Route path='/creative-production' element={<CreativeProduction  />}/>
                 <Route path='/contact-us' element={<ContactUs displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} closeNavPopup={closeNavPopup} />}/>
             </Routes>
             

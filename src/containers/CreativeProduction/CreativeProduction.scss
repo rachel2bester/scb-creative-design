@@ -2,11 +2,15 @@
 @use "../../assets/sass/mixins" as *;
 @use "../../assets/sass/reset" as *;
 
-.content-production {
+.creative-production {
     display: flex;
     justify-content: center;
+    background-color: $primary-color;
 
     &__content {
-        margin: 90px;
+        margin-top: 76px;
+        &__title {
+            padding: 30px;
+        }  
     }
 }

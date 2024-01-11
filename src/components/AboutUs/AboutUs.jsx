@@ -35,8 +35,6 @@ const AboutUs = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
                     
                 </div>
             </div>
-
-            
         </div>
     )
 }

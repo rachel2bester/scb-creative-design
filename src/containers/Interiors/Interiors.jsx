@@ -12,11 +12,12 @@ const Interiors = (props) => {
     const [projectIndex, setProjectIndex] = useState(null); 
     const [imageIndex, setImageIndex] = useState(null); 
     const [displaySideBar, setDisplaySideBar] = useState(true); 
+
     var sideBarButtonClassName;
 
-    const interiorsClassName = displaySideBar ? "interiors" : "interiors interiors--no-sidebar"
-
     const displayPhotoPopup = (imageIndex != null && projectIndex != null)
+    const interiorsClassName = (displaySideBar ? "interiors" : "interiors interiors--no-sidebar") + (displayPhotoPopup ? " interiors--dark": "")
+
     const project = projects[projectIndex]
 
     if (!displaySideBar) {
