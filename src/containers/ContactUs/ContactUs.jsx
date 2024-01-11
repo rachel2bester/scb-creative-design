@@ -34,14 +34,17 @@ const ContactUs = (props) => {
                         </svg>
                         
                         <p className="contact-us__content__address__text">
+                            
                             SCB Creative,<br/>
                             130 Image Court,<br/>
                             328-334 Molesey Road,<br/>
                             Hersham, Surrey<br/>
-                            KT12 3LT
+                            KT12 3LT<br/>
+                            (By Appointment Only) 
                         </p>
                     </a>
                 </div>
+                <Footer />
             </div>
         </div>
     );

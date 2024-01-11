@@ -12,8 +12,12 @@
         height:calc(100dvh - 76px);
         margin-top: 76px;
         display: grid;
-        grid-template-areas: "email logo address";
+        grid-template-areas: "email logo address"
+                            "footer footer footer";
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 106px;
+
+        
 
         &__email {
             background-color: $primary-color;
@@ -22,6 +26,14 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            * {
+                opacity: 1;
+                animation-name: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: 1.2s;
+            }
 
             &__svg {
                 width: 100px;
@@ -47,6 +59,14 @@
             justify-content: space-evenly;
             flex-direction: column;
 
+            * {
+                opacity: 1;
+                animation-name: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: 0.8s;
+            }
+
             &__text {
                 font-family: $primary-font-family;
                 font-size: 80px;
@@ -66,6 +86,15 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            * {
+                opacity: 1;
+                animation-name: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: 1.2s;
+            }
+
             &__svg {
                 width: 120px;
                 fill: $white;
@@ -76,7 +105,7 @@
             &__text {
                 color: $white;
                 font-family: $secondary-font-family;
-                font-size: 18px;
+                font-size: 16px;
                 &:hover {
                     color: $sagey-grey;
                 }
@@ -87,6 +116,15 @@
 
 a {
     text-decoration: none;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @media only screen and (min-aspect-ratio: 1) {
@@ -128,7 +166,6 @@ a {
                     font-size: 60px;
                 }
             }
-
             &__address {
                 &__svg {
                     width: 70px;
@@ -182,7 +219,6 @@ a {
                     font-size: 12px;
                 }
             }
-
             &__logo-panel {
                 &__text {
                     font-size: 35px;
@@ -206,9 +242,10 @@ a {
         &__content {
             grid-template-areas: "email"
                 "logo"
-                "address";
+                "address"
+                "footer";
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 106px;
 
             &__email {
 
@@ -273,35 +310,25 @@ a {
                 &__text {
                     font-size: 14px;;
                 }
+                
             }
         }
         
     }
 }
 
-// @media only screen and (max-aspect-ratio: 1) and (max-width: 350px) {
-//     .contact-us {
-//         &__content {
-//             &__logo-panel {
-//                 &__text {
-//                     font-size: 45px;
-//                 }
-//             }
-//         }
-//     }
-// }
-
 @media only screen and (max-aspect-ratio: 1) and (max-height: 700px) {
     .contact-us {
         &__content {
-            
-    
             &__email {
                 &__text {
                     font-size: 13px;
                 }
+                &__svg {
+                    padding-bottom: 5px;
+                }
             }
-    
+
             &__address {
                 &__text {
                     font-size: 13px;

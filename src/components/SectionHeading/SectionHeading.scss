@@ -14,6 +14,7 @@
         padding-right: 30px;
         opacity: 0;
         transition: all 0.75s ease;
+        transition-delay: 0.3s;
         &--white {
             color: $white;
         }
@@ -27,7 +28,7 @@
 	    width: 0px;
         height: 3px;
         background-color: $secondary-color;
-        transition-delay: 0.5;
+        transition-delay: 0.5s;
         &--visible {
             width: 100%;
         }

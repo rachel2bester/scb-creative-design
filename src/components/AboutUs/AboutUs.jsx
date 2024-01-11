@@ -16,10 +16,9 @@ const AboutUs = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
             <SectionHeading title="About Us"/>
             <div id='about-us' />
             <div className='about-us__container'>  
-                <LazyLoadImg imgSrc="http://placekitten.com/900/600" alt="fill in later" className='about-us__container__img'/>
                 <div className='about-us__container__text'>
                     <LazyLoadText text={
-                        "Welcome to SCB Creative Design & Production - we specialise in two creative fields:"
+                        <><b>Welcome to SCB Creative Design & Production</b> - we specialise in two creative fields:</>
                     }/>
 
                     <LazyLoadBulletPoints 

@@ -7,7 +7,23 @@
     font-family: $primary-font-family;
     color: $primary-color; 
 
+    transition: all ease-in 0.3s;
+    opacity: 1;
+	animation-name: fadeIn;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.8s;
+
     &--white {
         color: $white;
     }
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

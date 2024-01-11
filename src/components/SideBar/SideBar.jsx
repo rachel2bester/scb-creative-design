@@ -8,7 +8,7 @@ import Arrow from "../Arrow/Arrow";
 
 const SideBar = ({project, decrementProjectIndex, incrementProjectIndex, displaySideBar, toggleDisplaySideBar}) => {
 
-    var sideBarClassName, title, text, dark, instruction, sideBarButtonClassName, sideBarInstructionClassName, sideBarContainerClassName
+    var sideBarClassName, text, dark, instruction, sideBarButtonClassName, sideBarInstructionClassName, sideBarContainerClassName
 
     if (project) {
         sideBarClassName = "side-bar side-bar--dark"
@@ -18,7 +18,6 @@ const SideBar = ({project, decrementProjectIndex, incrementProjectIndex, display
 
     } else {
         sideBarClassName = "side-bar"
-        title = "Interiors"
         text = <>
                 <p>
                     SCB specialises in the design, project management, curation, and transformation of homes, living spaces, and offices. As more than just your typical interiors company, we are your partners in producing exceptional interior design. Our comprehensive approach involves meticulous organisation and planning of every project, from designing bespoke furniture to managing suppliers and contractors on-site, alleviating the renovation stress for our clients.
@@ -71,9 +70,9 @@ const SideBar = ({project, decrementProjectIndex, incrementProjectIndex, display
     
     return (
         <div className={sideBarClassName}>
-            <MainHeading title={"Interiors"} white={dark}/>
+            <MainHeading title="Interiors" white={dark}/>
             <div className={sideBarContainerClassName} >
-                {project && <div className="side-bar__subheading" >{project.projectName}</div>}
+                {project && <LazyLoadText className="side-bar__subheading" text={project.projectName}/>}
                 <LazyLoadText 
                     className={"side-bar__container__text"}
                     text={text}

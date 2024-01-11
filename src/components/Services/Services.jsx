@@ -18,7 +18,7 @@ const Services = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
                 <LazyLoadBulletPoints pointClass={'services__content__point'}
                     points={[
                         <><b>Production Consulting:</b> Offering skilled guidance on established content and event production projects.</>,
-                        <><b>End-to-End Project Delivery:</b> From conceptualisation to flawless execution, we ensure your content or event projects come to life seamlessly.</>,
+                        <><b>End-to-End Project Delivery:</b> From conceptualisation to flawless execution, we ensure your content or event projects come to life.</>,
                         <><b>Production Design: </b>Leveraging our in-house interior design expertise for set design, dressing, prop, and space planning for event delivery.</>,
                         <><b>Content and Event Production: </b>Handling the entire production process, from initial concept to final execution.</>,
                         <><b>Production Management: </b>Coordinating, scheduling, budgeting, hiring, and assistant directing to ensure a smooth and efficient production.</>,
