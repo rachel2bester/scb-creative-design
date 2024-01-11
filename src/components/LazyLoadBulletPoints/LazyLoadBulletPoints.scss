@@ -1,0 +1,28 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+@use "../../assets/sass/reset" as *;
+
+.container {
+    margin: 0px;
+    width: 90%;
+    padding: 0px;
+    padding-bottom: 15px;
+    text-align: center;
+    
+
+    &__point {
+        list-style-position: inside;
+        // display: inline-block;
+        opacity: 0;
+        transition: all 1s ease;
+        padding: 0px;
+        padding-bottom: 8px;
+        
+        
+        &--visible {
+            opacity: 1;
+        }
+    }
+}
+
+

@@ -4,6 +4,8 @@ import SectionHeading from '../SectionHeading/SectionHeading';
 import { Controller, Scene } from 'react-scrollmagic';
 import LazyLoadImg from '../LazyLoadImg/LazyLoadImg';
 import LazyLoadText from '../LazyLoadText/LazyLoadText';
+import LazyLoadBulletPoints from '../LazyLoadBulletPoints/LazyLoadBulletPoints';
+
 
 
 
@@ -12,23 +14,25 @@ const AboutUs = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
     return (
         <div className="about-us">
             <SectionHeading title="About Us"/>
-            
-
-               
             <div id='about-us' />
             <div className='about-us__container'>  
                 <LazyLoadImg imgSrc="http://placekitten.com/900/600" alt="fill in later" className='about-us__container__img'/>
                 <div className='about-us__container__text'>
-                    <div >
-                        <LazyLoadText text={
-                            "A Creative Production company marrying two interrelated skills: Spectacular Creativity with Skilled Organisation and Project Management. This company specialises in fostering creativity to deliver high-quality projects. Realising the fundamental necessity of organisation and planning to best harness artistry. SCB Creative will offer services in Creative Project Management, wedding the right people (from the UK and South Africa) with the right planning to fulfil our clients creative and budgetary needs by telling their stories."
-                        }/>
-                    </div>
-                    <div>
-                        <LazyLoadText text={
-                            "Specialising in bringing visions to life through planning, creative writing, designing, and managing we will seek to bring multiple strands under one umbrella. Using our collective skill we will work primarily in two interrelated specialisms- the production of stunning interiors (domestic and corporate) and the production of powerful creative content! "
-                        }/>
-                    </div>
+                    <LazyLoadText text={
+                        "Welcome to SCB Creative Design & Production - we specialise in two creative fields:"
+                    }/>
+
+                    <LazyLoadBulletPoints 
+                        points={[
+                            "Crafting skilled and exquisite client-centred interior design, for both domestic and corporate environments.",
+                            "Producing compelling, creative content and events."
+                        ]}
+                    />
+                    
+                    <LazyLoadText text={
+                        <>Essentially, we are passionate about transforming your creative desires into tangible, awe-inspiring realities. At the core of our mission is the seamless fusion of <b>Spectacular Creativity, Skilled Organisation</b> and <b>Project Management</b>. A mother and son team that takes on projects of all sizes, we invite you to explore our website and get a glimpse into a world where creativity meets precision, and where every project is a testament to our dedication to turning ideas into remarkable realities.</>
+                    }/>
+                    
                 </div>
             </div>
 

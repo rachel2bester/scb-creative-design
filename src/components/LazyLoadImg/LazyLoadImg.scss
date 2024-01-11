@@ -2,7 +2,7 @@
 @use "../../assets/sass/mixins" as *;
 @use "../../assets/sass/reset" as *;
 
-.text {
+.img {
     opacity: 0;
     transition: all 1s ease;
     &--visible {
