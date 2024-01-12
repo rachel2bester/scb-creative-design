@@ -27,6 +27,7 @@
 
 @media only screen and (max-width: 700px) {
     .interiors {
+        
         &__content {
             z-index: 0;
             overflow-x: hidden;
@@ -74,6 +75,22 @@
     }
 }
 
+@media only screen and (max-width: 700px) and (min-width: 536px) {
+    .interiors {
+        grid-template-columns: 500px 1fr;
+        
+        &--no-sidebar {
+            grid-template-columns: 0px 1fr;
+        }
+
+        &__sidebar-button {
+            &--hide {
+                left: 464px;
+            }
+        }
+    }
+}
+
 
 @media only screen and (min-width: 1200px) {
 
@@ -81,8 +98,7 @@
         grid-template-columns: 500px 1fr;
         transition: 0.5s all;
         &--dark {
-            grid-template-columns: 350px 1fr;
-            
+            grid-template-columns: 350px 1fr; 
         }
     }
 

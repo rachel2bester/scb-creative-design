@@ -1,15 +1,12 @@
 import React from 'react'
 import "./Services.scss"
 import SectionHeading from '../SectionHeading/SectionHeading';
-import { Controller, Scene } from 'react-scrollmagic';
-import LazyLoadImg from '../LazyLoadImg/LazyLoadImg';
-import LazyLoadText from '../LazyLoadText/LazyLoadText';
 import LazyLoadBulletPoints from '../LazyLoadBulletPoints/LazyLoadBulletPoints';
 
 
 
 
-const Services = ({ displayPopUp, toggleDisplayPopUp, closePopUp }) => {
+const Services = () => {
     
     return (
         <div className='services'>

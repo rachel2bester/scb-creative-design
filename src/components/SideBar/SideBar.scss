@@ -25,8 +25,8 @@
         font-weight: bold;
         padding: 10px;
         font-size: 24px;
+        transition-delay: 0.4s;
         font-family: $primary-font-family;
-
     }
 
     &--dark {
@@ -41,6 +41,7 @@
         padding-bottom: 10px;
         display: flex;
         justify-content: space-around;
+        align-items: center;
         flex-direction: column;
     }
 
@@ -74,12 +75,10 @@
 @media only screen and (max-width: 700px) {
     .side-bar {
         z-index: 1;
-        transition: 1s;
         overflow-x: hidden;
 
         &--hidden {
             padding: 0px;
-            transition: 1s;
         }
 
         &__container {
@@ -89,5 +88,15 @@
         }
 
         
+    }
+}
+
+@media only screen and (max-width: 700px) and (min-width: 536px) {
+    .side-bar {
+        &__container {
+            &__text {
+                width: 426px;
+            }
+        }
     }
 }

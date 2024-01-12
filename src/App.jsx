@@ -25,7 +25,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<Home displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} closeNavPopup={closeNavPopup}/>}/>
                 <Route path='/interiors' element={<Interiors projects={dummyProjects} displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} closeNavPopup={closeNavPopup}/>}/>
-                <Route path='/creative-production' element={<CreativeProduction  />}/>
+                <Route path='/creative-production' element={<CreativeProduction displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} closeNavPopup={closeNavPopup} />}/>
                 <Route path='/contact-us' element={<ContactUs displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} closeNavPopup={closeNavPopup} />}/>
             </Routes>
             

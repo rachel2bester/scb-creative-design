@@ -9,21 +9,20 @@ import Footer from "../Footer/Footer";
 
 
 const CreativeProduction = (props) => {
-    const { toggleDisplayPopUp, displayPopUp, closePopUp} = props;
+    const {toggleDisplayNavPopup, displayNavPopup, closeNavPopup} = props;
+    window.scrollTo(0,0); 
 
     return (
         <div className="creative-production">
-            <Header displayPopUp={displayPopUp} toggleDisplayPopUp={toggleDisplayPopUp} closePopUp={closePopUp}/>
+            <Header displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} navClear={false} popupClear={false} closeNavPopup={closeNavPopup}/>
             <div className="creative-production__content">
                 <div className="creative-production__content__title">
-                    <MainHeading title="Creative Content and Event Production" white/>
+                    <MainHeading title="Creative Content and Event Production" white addedClass='creative-production__content__title__text'/>
                 </div>
                 <CreativeProductionIntro />
                 <Services />
                 <Footer dark/>
             </div>
-            
-            
         </div>
     );
 };

@@ -3,14 +3,37 @@
 @use "../../assets/sass/reset" as *;
 
 .creative-production {
-    display: flex;
-    justify-content: center;
+    display: flex; 
     background-color: $primary-color;
-
     &__content {
         margin-top: 76px;
         &__title {
             padding: 30px;
         }  
+    }
+}
+
+
+@media only screen and ((max-width: 780px)) {
+    .creative-production {
+        &__content {
+            &__title {
+                &__text{
+                    font-size: 40px;
+                } 
+            }  
+        }
+    }
+}
+
+@media only screen and ((max-width: 480px)) {
+    .creative-production {
+        &__content {
+            &__title {
+                &__text{
+                    font-size: 30px;
+                }
+            }  
+        }
     }
 }
