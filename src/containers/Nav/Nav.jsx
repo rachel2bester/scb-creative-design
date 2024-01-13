@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import CloseButton from '../../components/CloseButton/CloseButton';
 import NavButtons from '../../components/NavButtons/NavButtons';
 import LogoSVG from '../../components/LogoSVG/LogoSVG';
@@ -8,20 +8,24 @@ import "./Nav.scss"
 const Nav = (props) => {
     const {toggleDisplayNavPopup, displayNavPopup, clear, closeNavPopup} = props;
 
+    const location = useLocation();
+
     var navClassName;
     var navLogoClassName;
     var navBarsClassName;
     var navButtonsClassName;
 
+
+
     if (clear) {
         navClassName = "nav"
-        navLogoClassName = "nav__logo"
+        navLogoClassName = "/" === location.pathname ? "nav__logo nav__logo--current" : "nav__logo";
         navBarsClassName = "nav__bars"
         navButtonsClassName = "nav__buttons"
 
     } else {
         navClassName = "nav nav--opaque"
-        navLogoClassName = "nav__logo nav__logo--opaque"
+        navLogoClassName = "/" === location.pathname ? "nav__logo nav__logo--opaque nav__logo--current" : "nav__logo nav__logo--opaque";
         navBarsClassName = "nav__bars nav__bars--opaque"
         navBarsClassName = "nav__bars nav__bars--opaque"
         navButtonsClassName = "nav__buttons nav__buttons--opaque"

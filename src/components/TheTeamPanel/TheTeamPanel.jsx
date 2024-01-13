@@ -14,7 +14,7 @@ const TheTeamPanel = () => {
                 teamMember="Caroline Cooney - Co-Director and Designer"
                 imgSrc="http://placekitten.com/600/600" 
                 text=
-                    {<>Caroline, an interior and furniture design expert with over 30 years of experience, possesses a discerning eye and a deep knowledge of interior styling and design. She relishes in collaborating closely with clients, getting to know them in order to craft spaces that they adore within specified budgets. Her versatile background spans creative domains, including domestic and corporate design. Caroline's expertise also extends to sourcing and delivering exquisite South African furnishings worldwide. Moreover, she is an adept creative project manager, having handled event design and production."</>} 
+                    {<>Caroline, an interior and furniture design expert with over 30 years of experience, possesses a discerning eye and a deep knowledge of interior styling and design. She relishes in collaborating closely with clients, getting to know them in order to craft spaces that they adore within specified budgets. Her versatile background spans creative domains, including domestic and corporate design. Caroline's expertise also extends to sourcing and delivering exquisite South African furnishings worldwide. Moreover, she is an adept creative project manager, having handled event design and production.</>} 
             />
             <TeamMember teamMember="James Cooney - Creative Producer"
                 imgSrc="http://placekitten.com/600/600" 

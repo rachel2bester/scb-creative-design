@@ -1,7 +1,6 @@
 import React from "react";
 import "./Interiors.scss";
 import Header from "../Header/Header";
-import MainHeading from "../../components/MainHeading/MainHeading";
 import Footer from "../Footer/Footer";
 import SideBar from "../../components/SideBar/SideBar";
 import PhotoPanel from "../PhotoPanel/PhotoPanel";

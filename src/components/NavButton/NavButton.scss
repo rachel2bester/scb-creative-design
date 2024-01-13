@@ -13,12 +13,12 @@
 
     &--current {
         font-weight: bold;
-        :hover {
-            opacity: 100%;
+
+        &:hover {
+            opacity: 100% !important;
         }
     }
     
-
     &:hover {
         opacity: 70%;
     }

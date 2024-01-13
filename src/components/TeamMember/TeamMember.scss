@@ -34,7 +34,7 @@
         &__text {
 
             font-family: $secondary-font-family;
-            width: 35%;
+            width: 45%;
             font-size: 15px;
             display: flex;
             flex-direction: column;
@@ -49,11 +49,7 @@
     }
 }
 
-@media only screen and (min-aspect-ratio: 3/2) {
-    .member {
-        
-    }
-}
+
 
 
 @media only screen and ((max-width: 850px))  {
@@ -70,6 +66,7 @@
             flex-wrap: wrap;
             align-items: center;
             flex-direction:column;
+        
             &--swapped {
                 flex-direction: column-reverse;
             }
@@ -97,6 +94,17 @@
         &__container {
             &__img {
                 width: 60%;
+            }
+        }
+    }
+}
+
+@media only screen and ((min-width: 1250px)){
+    .member {
+        &__container {
+            &__text {
+                font-family: $secondary-font-family;
+                width: 35%;
             }
         }
     }

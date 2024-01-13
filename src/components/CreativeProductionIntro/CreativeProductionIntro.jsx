@@ -2,9 +2,6 @@ import React from 'react'
 import "./CreativeProductionIntro.scss"
 import LazyLoadText from '../LazyLoadText/LazyLoadText';
 
-
-
-
 const CreativeProductionIntro = () => { 
     return (
         <div className="intro">

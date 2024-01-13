@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.scss";
-import Nav from "./../Nav/Nav";
 import { Controller, Scene } from 'react-scrollmagic';
 import LogoPanel from "../../components/LogoPanel/LogoPanel"
 import AboutUs from "../../components/AboutUs/AboutUs";

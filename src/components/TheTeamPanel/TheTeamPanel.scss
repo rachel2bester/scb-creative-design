@@ -11,7 +11,6 @@
     position: relative;
     z-index: 2;
 
-
     &__container {
         padding: 50px;
         display: flex;
@@ -27,28 +26,5 @@
             width: 30%;
             color: $white;
         }
-    }
-}
-
-@media only screen and (min-aspect-ratio: 3/2) {
-    .the-team {
-        
-    }
-}
-
-@media only screen and (max-aspect-ratio: 3/2) {
-    .the-team {
-        
-    }
-}
-
-@media only screen and ((max-width: 650px)  or (min-height: 800px)) {
-    .the-team {
-        
-    }
-}
-
-@media only screen and ((min-width: 650px))  {
-    .the-team {
     }
 }
