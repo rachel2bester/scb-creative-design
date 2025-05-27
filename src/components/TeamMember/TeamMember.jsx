@@ -1,6 +1,5 @@
 import React from 'react'
 import "./TeamMember.scss"
-import SectionHeading from '../SectionHeading/SectionHeading';
 import LazyLoadText from '../LazyLoadText/LazyLoadText';
 import LazyLoadImg from '../LazyLoadImg/LazyLoadImg';
 

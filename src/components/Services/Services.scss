@@ -5,9 +5,9 @@
 .services {
     display: flex;
     flex-direction: column;
-    background-color: $white;
+    background-color: $primary-color;
     padding: 30px;
-
+    border-top: 6px double $white;
     z-index: 2;
     position: relative;
     font-family: $secondary-font-family;
@@ -18,9 +18,10 @@
         align-items: center;
         flex-direction: column;
         padding: 10px;
+        color: $white;
         
         &__point {
-            padding: 20px;
+            padding: 18px;
         }
     }
 }

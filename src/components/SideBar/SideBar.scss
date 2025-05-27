@@ -10,7 +10,7 @@
     color: $primary-color;
     border-right: double $primary-color 6px;
     display: grid;
-    grid-template-rows: 90px 1fr 90px;
+    grid-template-rows: 80px 1fr 85px;
     font-family: $secondary-font-family;
     font-size: 13px;
     grid-area: sideBar;
@@ -23,10 +23,11 @@
 
     &__subheading {
         font-weight: bold;
-        padding: 10px;
+        padding: 20px;
         font-size: 24px;
         transition-delay: 0.4s;
         font-family: $primary-font-family;
+        padding-bottom: 5px;
     }
 
     &--dark {
@@ -36,13 +37,27 @@
     }
     
     &__container {
-        padding: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 0px;
+        padding-bottom: 0px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
+        &__text{
+            padding: 10px;
+        }
+        &__list {
+            text-align: center;
+            margin-left: 10px;
+            padding-left: 10px;
+            list-style-position: outside;
+            &__point{
+                padding-top: 15px;
+                
+                padding-bottom: 0px;
+            }
+        }
+        
     }
 
     &__instruction{

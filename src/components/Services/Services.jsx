@@ -10,18 +10,17 @@ const Services = () => {
     
     return (
         <div className='services'>
-            <SectionHeading  title="Services"/>
+            <SectionHeading  title="Services" white/>
             <div className='services__content'> 
                 <LazyLoadBulletPoints pointClass={'services__content__point'}
                     points={[
-                        <><b>Production Consulting:</b> Offering skilled guidance on established content and event production projects.</>,
-                        <><b>End-to-End Project Delivery:</b> From conceptualisation to flawless execution, we ensure your content or event projects come to life.</>,
-                        <><b>Production Design: </b>Leveraging our in-house interior design expertise for set design, dressing, prop, and space planning for event delivery.</>,
-                        <><b>Content and Event Production: </b>Handling the entire production process, from initial concept to final execution.</>,
-                        <><b>Production Management: </b>Coordinating, scheduling, budgeting, hiring, and assistant directing to ensure a smooth and efficient production.</>,
-                        <><b>Creative Input: </b>Providing storytelling expertise to enhance the creative process.</>,
-                        <><b>Creative Writing: </b>Offering script editing, scriptwriting, and write-ups (synopsis, plot, etc).</>
-                    ]}
+                        
+                        <><b>Production Consulting:</b> Expert guidance on content and event production, serving as a producer, production manager, coordinator, or assistant.</>,
+                        <><b>End-to-End Project Delivery:</b> From concept to execution, we bring your vision to life.</>,
+                        <><b>Creative Writing / Editing</b></>,
+                        <><b>Production Design:</b> In-house design expertise able to assist in both Set and Event design and dressing. </>
+
+                    ]} 
                 />
             </div>
         </div>

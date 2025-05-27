@@ -17,7 +17,7 @@ const LazyLoadBulletPoints = ({points, containerClass, pointClass }) => {
     
     return (<>
             <Controller>
-                <ul className={"container " +containerClass}>
+                <ul className={"container " + containerClass}>
                     {pointsJSX}
                 </ul>
             </Controller>

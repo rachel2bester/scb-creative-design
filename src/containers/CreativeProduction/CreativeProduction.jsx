@@ -5,6 +5,8 @@ import MainHeading from "../../components/MainHeading/MainHeading";
 import CreativeProductionIntro from "../../components/CreativeProductionIntro/CreativeProductionIntro";
 import Services from "../../components/Services/Services";
 import Footer from "../Footer/Footer";
+import Projects from "../../components/Projects/Projects";
+
 
 
 
@@ -17,10 +19,11 @@ const CreativeProduction = (props) => {
             <Header displayNavPopup={displayNavPopup} toggleDisplayNavPopup={toggleDisplayNavPopup} navClear={false} popupClear={false} closeNavPopup={closeNavPopup}/>
             <div className="creative-production__content">
                 <div className="creative-production__content__title">
-                    <MainHeading title="Creative Content and Event Production" white addedClass='creative-production__content__title__text'/>
+                    <MainHeading title="Creative Content and Event Production" addedClass='creative-production__content__title__text'/>
                 </div>
                 <CreativeProductionIntro />
                 <Services />
+                <Projects/>
                 <Footer dark/>
             </div>
         </div>

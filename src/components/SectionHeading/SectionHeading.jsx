@@ -8,10 +8,10 @@ const SectionHeading = ({title, white}) => {
     return (
         <div className='section-heading'>     
             <Controller>
-                <Scene classToggle="section-heading__heading--visible" offset={-window.innerHeight/2 + 50}>
+                <Scene classToggle={"section-heading__heading--visible"} offset={-window.innerHeight/2 + 50}>
                     <div className={headingClassName}>{title}</div>
                 </Scene>
-                <Scene classToggle="section-heading__line--visible" offset={-window.innerHeight/2 + 50}>
+                <Scene classToggle={"section-heading__line--visible"} offset={-window.innerHeight/2 + 50}>
                     <div className={lineClassName}></div>
                 </Scene>
             </Controller>

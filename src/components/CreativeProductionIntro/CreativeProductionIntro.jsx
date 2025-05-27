@@ -7,7 +7,7 @@ const CreativeProductionIntro = () => {
         <div className="intro">
             <div className='intro__container'>  
                 <LazyLoadText className={'intro__container__text'} text={
-                        "At SCB we specialise in delivering top-tier production services across a spectrum of creative ventures, spanning Film, TV, Theatre, and Events. Our expertise extends to planning film shoots. We utilise our established interior design skills and contractor networks for production design. We also, enjoy contributing to established event and creative projects, all while delivering finished products at the highest standard for our clients."
+                        "We collaborate on creative projects of all scales, working with both established and emerging Film, TV, Theatre, and Event productions. With the ability to leverage our in-house design talent, we ensure seamless creative organisation and deliver exceptional final results for our client."
                 }/>
             </div>
         </div>
