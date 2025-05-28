@@ -28,6 +28,17 @@
         transition-delay: 0.4s;
         font-family: $primary-font-family;
         padding-bottom: 5px;
+        
+        border-bottom: 4px double $primary-color;
+        width: 85%;
+    }
+
+    &__adjectives {
+        font-style: italic;
+        padding: 0px;
+        font-size: 16px;
+        transition-delay: 0.5s;
+        padding-bottom: 5px;
     }
 
     &--dark {
@@ -44,29 +55,69 @@
         align-items: center;
         flex-direction: column;
         &__text{
+            
             padding: 10px;
         }
         &__list {
-            text-align: center;
+            
             margin-left: 10px;
             padding-left: 10px;
-            list-style-position: outside;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
             &__point{
-                padding-top: 15px;
+                list-style-position: outside;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                text-align: center;
+            }
+            
+        }
+        &__projects_container {
+            text-align: center;
+            align-self: start;
+            padding-top: 15px;
+            padding-left:20px;
+            padding-right:20px;
+            
+
+            &__project {
+                list-style-position: outside;
+                margin-left: 10px;
+                padding-left: 10px;
+                padding-top: 5px;
+    
+                padding-bottom: 5px;
                 
-                padding-bottom: 0px;
+                &:hover {
+                    opacity: 60%;
+                    transition: 0.05s ease-in-out;
+                }
+                b {
+                    pointer-events: none
+                }
+                i {
+                    pointer-events: none
+                }
+
+                &__text {
+                    display: block;
+                }
             }
         }
-        
     }
 
     &__instruction{
-        font-weight: bold;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        font-family: $primary-font-family;
         height: 100%;
 
+        &__text {
+            width:85%;
+            align-self: center;
+        }
         &__arrows {
             display: flex;
             justify-content: space-around;

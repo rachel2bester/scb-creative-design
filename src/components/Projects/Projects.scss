@@ -16,15 +16,27 @@
 
     &__content {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
         padding: 10px;
-        
-        &__point {
-            padding: 13px;
-            list-style-position: outside;
-            padding-left: 25px;
+
+        &__img{
+            width: 600px;
+        }
+
+        &__points {
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            flex-direction: column;
+            padding: 10px;
+            width: 50%;
+            &__point {
+                padding: 13px;
+                list-style-position: outside;
+                padding-left: 25px;
+            }
         }
     }
 }
@@ -32,29 +44,53 @@
 
 
 
-@media only screen and ((max-width: 650px)) {
-    .services {
-        padding-top: 10px;
-        padding-bottom: 10px;
+@media only screen and ((max-width: 1400px)) {
+    
+    .projects{
+       
+    
+        &__content {
+            flex-direction: column;
+            &__img{
+                margin-top: 30px;
+                width: 500px;
+            }
+    
+            &__points {
+                width: 90%;
+                &__point {
+                    
+                }
+            }
+        }
     }
+    
 }
 
-@media only screen and ((min-width: 1110px)) {
-    .services {
-        padding-left: 60px;
-        padding-right: 60px;
+@media only screen and ((max-width: 740px)) {
+    
+    .projects{
+        &__content {
+            flex-direction: column;
+            &__img{
+                
+                width: 85%;
+            }
+    
+            &__points {
+                
+                &__point {
+                    
+                }
+            }
+        }
     }
+    
 }
 
 @media only screen and ((max-width: 500px)) {
-    .services {
-        &__content {
-            
-            &__point {
-                padding-left: 0px;
-                padding-right: 0px;
-            }
-        }
+    .projects{
+
     }
 }
 

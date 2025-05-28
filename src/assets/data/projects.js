@@ -101,8 +101,9 @@ import Sparta9 from "./../images/Sparta/9.jpg"
 
 const projects = [
     {
-        projectName: "Cobham Family Home - Elegant, Warm, Welcoming",
-        projectBrief: "Spatial planning and furniture design for this newly renovated Cobham Family Home. Working with the client to find entirely new furniture and install bespoke Joinery we took this blank canvas house to an Elegant, Warm and Welcoming family home.",
+        projectName: "Cobham Family Home",
+        projectAdjectives: "Elegant, Warm, Welcoming",
+        projectBrief: "Spatial planning and furniture design for this newly renovated Cobham Family Home. Working with the client to find entirely new furniture and install bespoke joinery, we trasformed this blank canvas house into an Elegant, Warm and Welcoming family home.",
         images: [
             {
                 imgSrc: Earlswood1,
@@ -182,7 +183,115 @@ const projects = [
         ]
     },
     {
-        projectName: "Umhlanga, South Africa Beach Apartment - Pristine, Meticulous, Tasteful",
+        projectName: "Crown Estate Mansion",
+        projectAdjectives: "Abundant, Luxurious, Comfortable",
+        projectBrief: "Transforming this exquisite 7-bedroom house into an abundant, yet comfortable family home. We collaborated closely with our client to design bespoke furniture, craft elegant joinery, and add our key signature touches throughout. From consulting on the framing and placement of a sophisticated art collection to sourcing the perfect silk rugs that seamlessly complement the client's existing furniture, every detail was carefully curated to achieve a truly luxurious home.",
+        images: [
+            {
+                imgSrc: Hurlingham1,
+                alt: "Dining room",
+                displayOnMain: true
+            },
+            {
+                imgSrc: Hurlingham2,
+                alt: "Living room",
+                displayOnMain: false
+            },
+            {
+                imgSrc: Hurlingham3,
+                alt: "Living room",
+                displayOnMain: true
+            },
+            {
+                imgSrc: Hurlingham4,
+                alt: "Entrance hall",
+                displayOnMain: true
+            },
+            {
+                imgSrc: Hurlingham5,
+                alt: "Study",
+                displayOnMain: false
+            },
+            {
+                imgSrc: Hurlingham6,
+                alt: "Cinema room",
+                displayOnMain: true
+            },
+            {
+                imgSrc: Hurlingham7,
+                alt: "Study",
+                displayOnMain: true
+            },
+            {
+                imgSrc: Hurlingham8,
+                alt: "Bathroom",
+                displayOnMain: false
+            },
+            {
+                imgSrc: Hurlingham9,
+                alt: "Bathroom",
+                displayOnMain: false
+            },
+            {
+                imgSrc: Hurlingham10,
+                alt: "Dressing room",
+                displayOnMain: false
+            },
+            {
+                imgSrc: Hurlingham11,
+                alt: "Pool",
+                displayOnMain: true
+            },
+            {
+                imgSrc: Hurlingham12,
+                alt: "Bedroom",
+                displayOnMain: true
+            },
+            {
+                imgSrc: Hurlingham13,
+                alt: "Sitting room",
+                displayOnMain: true
+            },
+            {
+                imgSrc: Hurlingham14,
+                alt: "Bathroom",
+                displayOnMain: true
+            },
+            {
+                imgSrc: Hurlingham15,
+                alt: "Bar area",
+                displayOnMain: false
+            },
+            {
+                imgSrc: Hurlingham16,
+                alt: "Entrance hall sketch",
+                displayOnMain: false
+            },
+            {
+                imgSrc: Hurlingham17,
+                alt: "Sitting Room",
+                displayOnMain: true
+            },
+            {
+                imgSrc: Hurlingham18,
+                alt: "Display",
+                displayOnMain: false
+            },
+            {
+                imgSrc: Hurlingham19,
+                alt: "Stairs",
+                displayOnMain: true
+            },
+            {
+                imgSrc: Hurlingham20,
+                alt: "Kitchen",
+                displayOnMain: true
+            }
+        ]
+    },
+    {
+        projectName: "Umhlanga, South Africa Beach Apartment",
+        projectAdjectives: "Pristine, Meticulous, Tasteful",
         projectBrief: "",
         images: [
             {
@@ -303,113 +412,8 @@ const projects = [
         ]
     },
     {
-        projectName: "Crown Estate Masterpiece - Abundant, Luxurious, Comfortable",
-        projectBrief: "Transforming this exquisite 7-bedroom house into an abundant, yet comfortable family home. We collaborated closely with our client to design bespoke furniture, craft elegant joinery, and add our key signature touches throughout from consulting on the framing and placement of a sophisticated art collection to sourcing the perfect silk rugs that seamlessly complement the client's existing furniture, every detail was carefully curated to achieve a truly luxurious home!",
-        images: [
-            {
-                imgSrc: Hurlingham1,
-                alt: "Dining room",
-                displayOnMain: true
-            },
-            {
-                imgSrc: Hurlingham2,
-                alt: "Living room",
-                displayOnMain: false
-            },
-            {
-                imgSrc: Hurlingham3,
-                alt: "Living room",
-                displayOnMain: true
-            },
-            {
-                imgSrc: Hurlingham4,
-                alt: "Entrance hall",
-                displayOnMain: true
-            },
-            {
-                imgSrc: Hurlingham5,
-                alt: "Study",
-                displayOnMain: false
-            },
-            {
-                imgSrc: Hurlingham6,
-                alt: "Cinema room",
-                displayOnMain: true
-            },
-            {
-                imgSrc: Hurlingham7,
-                alt: "Study",
-                displayOnMain: true
-            },
-            {
-                imgSrc: Hurlingham8,
-                alt: "Bathroom",
-                displayOnMain: false
-            },
-            {
-                imgSrc: Hurlingham9,
-                alt: "Bathroom",
-                displayOnMain: false
-            },
-            {
-                imgSrc: Hurlingham10,
-                alt: "Dressing room",
-                displayOnMain: false
-            },
-            {
-                imgSrc: Hurlingham11,
-                alt: "Pool",
-                displayOnMain: true
-            },
-            {
-                imgSrc: Hurlingham12,
-                alt: "Bedroom",
-                displayOnMain: true
-            },
-            {
-                imgSrc: Hurlingham13,
-                alt: "Sitting room",
-                displayOnMain: true
-            },
-            {
-                imgSrc: Hurlingham14,
-                alt: "Bathroom",
-                displayOnMain: true
-            },
-            {
-                imgSrc: Hurlingham15,
-                alt: "Bar area",
-                displayOnMain: false
-            },
-            {
-                imgSrc: Hurlingham16,
-                alt: "Entrance hall sketch",
-                displayOnMain: false
-            },
-            {
-                imgSrc: Hurlingham17,
-                alt: "Sitting Room",
-                displayOnMain: true
-            },
-            {
-                imgSrc: Hurlingham18,
-                alt: "Display",
-                displayOnMain: false
-            },
-            {
-                imgSrc: Hurlingham19,
-                alt: "Stairs",
-                displayOnMain: true
-            },
-            {
-                imgSrc: Hurlingham20,
-                alt: "Kitchen",
-                displayOnMain: true
-            }
-        ]
-    },
-    {
-        projectName: "Oxshott Home - Seamless, Stylish, Extraordinary",
+        projectName: "Oxshott Home",
+        projectAdjectives: "Seamless, Stylish, Extraordinary",
         projectBrief: "",
         images: [
             {
@@ -475,7 +479,8 @@ const projects = [
         ]
     },
     {
-        projectName: "Element Bay, Mauritius, Apartment - Polished, Tailored, Inviting",
+        projectName: "Element Bay, Mauritius Apartment",
+        projectAdjectives: "Polished, Tailored, Inviting",
         projectBrief: "",
         images: [
             {
@@ -521,7 +526,8 @@ const projects = [
         ]
     },
     {
-        projectName: "Vilankulos Mozambique, Beach House - Spontaneous, Simplified, Relaxed",
+        projectName: "Vilankulos, Mozambique Beach House",
+        projectAdjectives: "Spontaneous, Simplified, Relaxed",
         projectBrief: "",
         images: [
             {
@@ -557,8 +563,9 @@ const projects = [
         ]
     },
     {
-        projectName: "Sparta Multiuse Offices - Distinct, Efficient and Ergonomic",
-        projectBrief: "",
+        projectName: "Sparta Multiuse Offices",
+        projectAdjectives: "Distinct, Efficient and Ergonomic",
+        projectBrief: "Working closely with one of South Africa's largest beef suppliers, Caroline designed a unique head office, seamlessly blending Sparta's branding with refined décor to create an efficient, ergonomic workspace.",
         images: [
             {
                 imgSrc: Sparta1,

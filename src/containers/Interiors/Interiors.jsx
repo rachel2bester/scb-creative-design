@@ -77,6 +77,16 @@ const Interiors = (props) => {
         }  
     };
 
+    const onProjectClick = (event, sidebar) => {
+        const idSplit = event.target.id.split("_")
+        setProjectIndex(parseInt(idSplit[1]))
+        setImageIndex(parseInt(0))
+        if (sidebar) {
+            setDisplaySideBar(true)
+        }  
+    };
+
+
     const displayedImages = [];
     projects.forEach((project, projectIndex) => {
         project.images.forEach((image, imageIndex) => {
@@ -99,6 +109,8 @@ const Interiors = (props) => {
                 incrementProjectIndex={incrementProjectIndex}
                 decrementProjectIndex={decrementProjectIndex}
                 toggleDisplaySideBar={toggleDisplaySideBar}
+                projects={projects}
+                onProjectClick={onProjectClick}
             />
 
             <div className={sideBarButtonClassName} onClick={toggleDisplaySideBar}>           

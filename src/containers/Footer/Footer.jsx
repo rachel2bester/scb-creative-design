@@ -8,7 +8,7 @@ const Footer = ({dark}) => {
 
     return (
         <div className={footerClassName}>
-            <LazyLoadText footer className={"footer__text"} text="Copyright © SCB CREATIVE DESIGN LIMITED. All rights reserved. Registered office: Unit 130 Image Court, 328-334 Molesey Rd, London, United Kingdom, KT12 3LT. Registered in England, Company Number: 15168233" />
+            <LazyLoadText footer className={"footer__text"} text="Copyright © SCB CREATIVE DESIGN LIMITED. All rights reserved. Registered office: Unit 130 Image Court, 328-334 Molesey Rd, London, United Kingdom, KT12 3LT. Registered in England, Company Number: 15168233, VAT Registration Number: 486278834" />
             <LazyLoadText footer className={"footer__text"} text="Website Designed and Built by Rachel Bester" />
         </div>
     );

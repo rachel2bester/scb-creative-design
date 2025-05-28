@@ -29,9 +29,18 @@
             align-items: center;
             justify-content: space-between;
             * {
-                padding: 14px;
+                padding: 11px;
             }
         }
+
+        &__points {
+            padding: 0px;
+            &__point {
+                padding: 11px;
+            }
+            margin-bottom: 10px;;
+        }
+        
     }
 }
 
@@ -45,9 +54,7 @@
             &__text{
                 font-size: 13px;
                 width: 100%;
-                * {
-                    padding-top: 20px;
-                }               
+                             
             }
         }
     }

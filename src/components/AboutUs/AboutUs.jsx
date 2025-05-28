@@ -11,11 +11,13 @@ const AboutUs = () => {
             <SectionHeading title="About Us"/>
             <div className='about-us__container'>  
                 <div className='about-us__container__text'>
-                    <LazyLoadText text={
+                    <LazyLoadText   text={
                         <><b>Welcome to SCB Creative Design & Production</b> - we specialise in two creative fields:</>
                     }/>
 
                     <LazyLoadBulletPoints 
+                        containerClass='about-us__container__points'
+                        pointClass='about-us__container__points__point'
                         points={[
                             "Crafting skilled and exquisite client-centred interior design, for both domestic and corporate environments.",
                             "Producing compelling, creative content and events."
