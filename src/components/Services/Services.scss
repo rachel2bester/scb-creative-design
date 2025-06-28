@@ -15,19 +15,26 @@
     &__content {
         display: flex;
         justify-content: center;
-        align-items: center;
+        
+        
+        text-align: left;
         flex-direction: row;
 
         &__points {
             width: 60%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             flex-direction: column;
             padding: 10px;
+            
+            align-items: start;
             color: $white;
+
             &__point {
                 padding: 18px;
+                margin-left: 20px;
+                list-style-position: outside;
             }
         }
         &__img {
@@ -59,9 +66,8 @@
     .services {
         &__content {
             
-            
             &__points {
-                width: 85%;
+                
             }
             &__img {
                 width: 80%;
@@ -76,9 +82,10 @@
         &__content {
             
             flex-wrap: wrap;
+
             
             &__points {
-                width: 85%;
+                width: 95%;
             }
             &__img {
             }
